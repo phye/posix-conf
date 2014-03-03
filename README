@@ -1,3 +1,6 @@
 #Prepare for git
 $git config user.name "Philip Ye"
 $git config user.email "phye@cisco.com"
+
+#Before push, need to add remote host by the following cmd:
+$git remote add short_name git@$remote_host:$remote_path
