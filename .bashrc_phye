@@ -1,0 +1,37 @@
+# Aliases  ---
+alias ls="ls --color"
+alias ll="ls -al"
+alias tmuxn="tmux new-session -s"
+alias tmuxa="tmux attach-session -t"
+alias grep="grep -I"
+
+# Functions ---
+tmux-window-name()
+{
+    if [ "$PWD" != "$LPWD" ]; then
+        LPWD="$PWD";
+        tmux rename-window ${PWD//*\//};
+    fi;
+};
+
+# Exports --- 
+# Enable this only if tmux is needed
+#export PROMPT_COMMAND=tmux-window-name
+export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;35m\]\W\[\e[0m\]\$'
+export PATH="$HOME/bin/phye:$HOME/bin:$PATH"
+export log_on_se="$HOME/bin/phye/zzdebug.sh"
+export log_on_pc="$HOME/bin/phye/logpc.sh"
+
+if [ -f $HOME/.git-completion.bash ]; then
+    source $HOME/.git-completion.bash
+fi
+
+if [ -f $HOME/.bashrc_phye_cisco ]; then
+    source $HOME/.bashrc_phye_cisco
+    echo "Cisco Setting sourced ..."
+else 
+    if [ -f $HOME/.bashrc_phye_general ]; then
+        source $HOME/.bashrc_phye_general
+        echo "General Setting sourced ..."
+    fi
+fi

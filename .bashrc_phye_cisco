@@ -1,0 +1,11 @@
+alias goftp="lftp 10.74.61.154/pub2/phye"
+
+if [[ $HOSTNAME == sha-* ]]; then
+    if [ -f ~/.bashrc_phye_official ];then 
+        source ~/.bashrc_phye_official
+    fi
+else
+    if [ -f ~/.bashrc_phye_unofficial ]; then
+        source ~/.bashrc_phye_unofficial
+    fi
+fi
