@@ -1,0 +1,23 @@
+#Aliases ---
+#Personal script
+alias csg="/users/phye/bin/cscope_gen.sh"
+#Workspace Related
+alias gows="cd /ws/phye"
+#Fishbowl related
+alias vt='/opt/vde/services/instances/vde_latest/bin/vde_tool --Vno_symlink --Vverbose --Vforce'
+alias vtn="vt --Vno_sync"
+alias vn="vt --Vno_sync"
+alias vtsi='vt --Vtime 30d --Vreason bug sync_in'
+alias vtso='vt --Vtime 30d --Vreason bug sync_out'
+#Misc
+alias sats2="ssh sha-iptv-ats2 -t 'bash'"
+function tcl_grep()
+{
+    cd $SANITY/sanity/auto_vcn
+    grep $1 -r lib
+}
+alias tg="tcl_grep"
+
+export PROMPT_COMMAND=tmux-window-name
+export WS=/ws/phye
+
