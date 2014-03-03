@@ -1,1 +1,0 @@
-set cino=g0

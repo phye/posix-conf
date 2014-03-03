@@ -1,3 +1,0 @@
-#Prepare for git
-$git config user.name "Philip Ye"
-$git config user.email "phye@cisco.com"
