@@ -8,6 +8,9 @@ export PHYE_OS=10.74.7.107
 export PHYE_MISC=10.74.7.109
 export PHYE_LNX=10.74.3.116
 export PHYE_CLNT=10.74.23.236
+export PHYE_TV=10.74.7.120
+export PERF_OS=10.74.23.143
+export PHYE_WS=10.74.23.235
 
 alias spc="$log_on_se $PHYE_CDSM"
 alias spr="$log_on_se $PHYE_SR"
@@ -19,3 +22,6 @@ alias spos="$log_on_pc admin default $PHYE_OS"
 alias spms2="$log_on_pc admin default $PHYE_MISC"
 alias spclnt="$log_on_pc admin default $PHYE_CLNT"
 alias splnx="$log_on_pc root cisco123! $PHYE_LNX"
+alias sptv="$log_on_pc root rootroot $PHYE_TV"
+alias spos2="$log_on_pc admin default $PERF_OS"
+alias spws="$log_on_pc admin default $PHYE_WS"

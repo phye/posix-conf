@@ -20,11 +20,13 @@ set cursorline
 filetype off
 filetype plugin indent on   
 set completeopt=menu
+set backspace=indent,eol,start
 " }}}
 
 "Some autocmds --- {{{
 augroup filetype_c 
     autocmd!
+    autocmd FileType c,cpp setlocal foldmethod=manual
     autocmd FileType c,cpp noremap <buffer> <leader>c I//<esc>
     autocmd FileType c,cpp noremap <buffer> <leader>d ^xx
     "autocmd InsertLeave * if pumvisible()==0|pclose|endif
@@ -47,6 +49,12 @@ augroup filetype_vim
     autocmd FileType .vim noremap <buffer> <leader>c I"<esc>
     autocmd FileType .vim noremap <buffer> <leader>d ^x<esc>
 augroup END
+augroup filetype_make
+    autocmd!
+    autocmd FileType make set noet
+    autocmd FileType make set sts=4
+    autocmd FileType make set ts=4
+augroup END
 " }}}
 
 "Some maps --- {{{
@@ -55,8 +63,8 @@ nnoremap tb :TagbarToggle<cr>
 nnoremap <F12> : AV<cr>
 nnoremap <leader>bf :buffers<cr>
 nnoremap <silent> <F3> :Grep<CR>
-nnoremap <leader>f :/^start<cr>
-nnoremap <leader>F :/^Start<cr>
+"nnoremap <leader>F :/\v(^|:{2})start<cr>
+"nnoremap <leader>F :/\v(^|:{2})Start<cr>
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <leader>g :silent exe "grep! -r " . shellescape(expand("<cWORD>")) . " ."<cr>:copen 5<cr>
@@ -80,6 +88,8 @@ abbrev #### ###########################################################
 abbrev ---- -----------------------------------------------------------
 abbrev ==== ===========================================================
 abbrev //// ///////////////////////////////////////////////////////////
+abbrev #i #include
+abbrev #d #define
 " }}}
 
 " Misc --- {{{
