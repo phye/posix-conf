@@ -26,6 +26,8 @@ tmux-window-name()
 #export PROMPT_COMMAND=tmux-window-name
 export PS1='\[\e[0;33m\]\u\[\e[0m\]@\[\e[0;32m\]\h\[\e[0m\]:\[\e[0;35m\]\W\[\e[0m\]\$'
 export PATH="$HOME/bin/phye:$HOME/bin:$PATH"
+export log_on_se="$HOME/bin/phye/zzdebug.sh"
+export log_on_pc="$HOME/bin/phye/logpc.sh"
 
 if [ -f $HOME/.git-completion.bash ]; then
     source $HOME/.git-completion.bash
