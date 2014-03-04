@@ -4,6 +4,10 @@ echo "Copying all config files to $HOME"
 cp .[a-z]* $HOME 2>/dev/null
 cp -r .vim $HOME 2>/dev/null
 
+mkdir -p $HOME/bin/
+cp -r phye $HOME/bin/ 2>/dev/null
+cp -r sanity $HOME/bin/ 2>/dev/null
+
 echo "Appending .bashrc to include configs for phye"
 BASHRC_FILE=$HOME/.bashrc
 #touch $BASHRC_FILE
@@ -16,5 +20,4 @@ fi
 
 echo "Sourcing modified .bashrc_phye"
 echo ""
-echo $BASHRC_FILE
 . $BASHRC_FILE
