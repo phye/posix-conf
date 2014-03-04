@@ -1,4 +1,5 @@
 alias goftp="lftp 10.74.61.154/pub2/phye"
+export log_on_se="$HOME/bin/phye/zzdebug.sh"
 
 if [[ $HOSTNAME == sha-* ]]; then
     if [ -f ~/.bashrc_phye_official ];then 
