@@ -20,4 +20,4 @@ fi
 
 echo "Sourcing modified .bashrc_phye"
 echo ""
-. $BASHRC_FILE
+source $BASHRC_FILE
