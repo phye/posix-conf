@@ -1,8 +1,8 @@
 alias gosftp="lftp 10.74.7.116/pub"
 #Uncomment if necessary
-#export http_proxy="http://proxy-rtp-1.cisco.com:8080"
-#export https_proxy="http://proxy-rtp-1.cisco.com:8080"
-#export ftp_proxy="http://proxy-rtp-1.cisco.com:8080"
+export http_proxy="http://proxy-rtp-1.cisco.com:8080"
+export https_proxy="http://proxy-rtp-1.cisco.com:8080"
+export ftp_proxy="http://proxy-rtp-1.cisco.com:8080"
 
 if [ -f $HOME/.bashrc_phye_sanity_tb ]; then
     source ~/.bashrc_phye_sanity_tb
