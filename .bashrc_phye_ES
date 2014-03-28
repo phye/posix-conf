@@ -18,6 +18,6 @@ function tcl_grep()
 }
 alias tg="tcl_grep"
 
-export PROMPT_COMMAND=tmux-window-name
+#export PROMPT_COMMAND=tmux-window-name
 export WS=/ws/phye
 
