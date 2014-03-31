@@ -76,9 +76,8 @@ nnoremap <leader>bt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr><cr>
 nnoremap <leader>ast :set tags+=/ws/phye/stl/tags<cr>
 
 inoremap jk <ESC>
-inoremap <ESC> <nop>
-vnoremap jk <ESC>
-onoremap in( :<c-u>normal! f(vi(<cr>
+"inoremap <ESC> <nop>
+"vnoremap jk <ESC>
 " }}}
 
 "Some Abbreviations --- {{{
