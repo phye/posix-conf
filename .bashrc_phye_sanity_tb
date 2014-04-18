@@ -36,7 +36,7 @@ alias tc="telnet $CONSOLE_IP"
 alias t2cdsm="telnet 10.74.61.8 2017"
 alias t2sr="telnet 10.74.61.11 2005"
 alias t2se1="telnet 10.74.61.11 2006"
-alias t2se2="telnet 10.74.61.39 2006"
+alias t2se2="telnet 10.74.61.11 2012"
 
 alias s3pc1="$log_on_pc admin default 10.74.23.230"
 alias s3pc2="$log_on_pc admin default 10.74.23.231"
