@@ -139,6 +139,10 @@ nnoremap wm :WMToggle<cr>
 "cscope related
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 set cspc=5
+
+"vimwiki related
+let g:vimwiki_list = [{ 'path': '$HOME/vimwiki', 
+            \ 'path_html' : '$HOME/vimwiki/html' }]
 " }}}
 
 " Cross platform support --- {{{
