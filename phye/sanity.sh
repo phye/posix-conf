@@ -19,14 +19,14 @@ tmux selectp -t 2
 tmux splitw -v -p 50
 
 tmux selectp -t 0 
-tmux send-keys "sats2" C-m
+#tmux send-keys "sats2" C-m
 tmux send-keys "$CMD$PREFIX""cdsm" C-m
 tmux selectp -t 1 
-tmux send-keys "sats2" C-m
+#tmux send-keys "sats2" C-m
 tmux send-keys "$CMD$PREFIX""sr" C-m
 tmux selectp -t 2 
-tmux send-keys "sats2" C-m
+#tmux send-keys "sats2" C-m
 tmux send-keys "$CMD$PREFIX""se1" C-m
 tmux selectp -t 3 
-tmux send-keys "sats2" C-m
+#tmux send-keys "sats2" C-m
 tmux send-keys "$CMD$PREFIX""se2" C-m

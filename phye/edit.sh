@@ -6,7 +6,7 @@ tmux new-window -t $SESSION:1 -n 'src'
 tmux new-window -t $SESSION:2 -n 'aux' 
 tmux new-window -t $SESSION:3 -n 'checkin'
 tmux new-window -t $SESSION:4 -n 'aux2'
-tmux new-window -t $SESSION:5 -n 'ATS' 'ssh sha-iptv-ats2 -t 'bash''
+tmux new-window -t $SESSION:5 -n 'ATS' 'ssh phye@sha-iptv-ats2 -t bash'
 
-tmux select-window -t $SESSION:1
+tmux select-window -t $SESSION:^
 tmux attach-session -t $SESSION
