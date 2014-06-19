@@ -146,8 +146,6 @@ let wiki_1 = {'path': '$HOME/vimwiki/Work',
 let wiki_2 = {'path': '$HOME/vimwiki/Learn',
             \ 'path_html' : '$HOME/vimwiki/Learn/html'}
 let g:vimwiki_list = [wiki_1, wiki_2]
-nnoremap <leader>tt :<Plug>VimwikiToggleListItem<cr>
-nnoremap <leader>wah :<Plug>VimwikiAll2HTML<cr>
 " }}}
 
 " Cross platform support --- {{{
