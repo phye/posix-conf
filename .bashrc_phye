@@ -31,13 +31,3 @@ export log_on_pc="$HOME/bin/phye/logpc.sh"
 if [ -f $HOME/.git-completion.bash ]; then
     source $HOME/.git-completion.bash
 fi
-
-if [ -f $HOME/.bashrc_phye_cisco ]; then
-    source $HOME/.bashrc_phye_cisco
-    echo "Cisco Setting sourced ..."
-else 
-    if [ -f $HOME/.bashrc_phye_general ]; then
-        source $HOME/.bashrc_phye_general
-        echo "General Setting sourced ..."
-    fi
-fi
