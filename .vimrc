@@ -1,4 +1,5 @@
 "General settings --- {{{
+set t_Co=256
 color torte
 syntax on
 set nu

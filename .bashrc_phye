@@ -1,8 +1,8 @@
 # Aliases  ---
 alias ls="ls --color"
 alias ll="ls -al"
-alias tmuxn="tmux new-session -s"
-alias tmuxa="tmux attach-session -t"
+alias tmuxn="tmux -2 new-session -s"
+alias tmuxa="tmux -2 attach-session -t"
 alias grep="grep -I"
 alias ga="git add"
 alias gc="git clone"
