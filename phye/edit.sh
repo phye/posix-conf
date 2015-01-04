@@ -8,5 +8,5 @@ tmux new-window -t $SESSION:3 -n 'checkin'
 tmux new-window -t $SESSION:4 -n 'aux2'
 tmux new-window -t $SESSION:5 -n 'ATS' 
 
-tmux select-window -t $SESSION:0
+tmux select-window -t $SESSION:^
 tmux attach-session -t $SESSION
