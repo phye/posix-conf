@@ -34,9 +34,8 @@ augroup filetype_c
 augroup END
 augroup filetype_script 
     autocmd!
-    autocmd BufWritePre *.py :normal gg=G
-    autocmd FileType tcl,sh,py noremap <buffer> <leader>c I#<esc>
-    autocmd FileType tcl,sh,py noremap <buffer> <leader>d ^x<esc>
+    autocmd FileType tcl,sh noremap <buffer> <leader>c I#<esc>
+    autocmd FileType tcl,sh noremap <buffer> <leader>d ^x<esc>
 augroup END
 augroup filetype_xml
     autocmd!
