@@ -1,0 +1,12 @@
+host dev
+    hostname 121.41.77.248
+    user root
+
+host gitdev
+    hostname 121.41.77.248
+    user root
+
+host phye
+    hostname 121.41.77.248
+    user phye
+
