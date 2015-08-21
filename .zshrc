@@ -20,7 +20,4 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-alias ls='ls --color'
-alias gs='git status'
-
-export EDITOR='vim'
+source .shrc_phye
