@@ -1,0 +1,46 @@
+#! /usr/bin/expect
+
+set myvm(example) 192.168.0.2
+
+set i 0; foreach n $argv {set [incr i] $n}
+
+if {[info exists myvm($1)]} {
+    set ip $myvm($argv)
+} else {
+    set ip $argv
+}
+
+if {[info exists 2]} {
+    set port $2
+} else {
+    set port 22
+}
+
+set pwd1 "default"
+set pwd2 "We!come2mo$"
+set pwd3 "ernst"
+
+spawn ssh admin@$ip -p $port
+
+set timeout 60
+expect {
+    "(yes/no)?" {
+        send "yes\r"
+        expect "password:" {send "$pwd1\r"}
+    }
+    "password:" {
+        send "$pwd1\r"
+    }
+}
+expect {
+    "#" {
+        send "zzdebugshell\r"
+        expect "\r\n" {send "$pwd1\r"}
+        expect "\r\n" {send "$pwd3\r"}
+    }
+    "]" {
+        send "su -\r"
+        expect "Password:" {send "$pwd2\r"}
+    }
+}
+interact
