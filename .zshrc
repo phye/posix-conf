@@ -20,4 +20,4 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-source .shrc_phye
+source ~/.shrc_phye
