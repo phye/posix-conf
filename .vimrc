@@ -1,6 +1,6 @@
 "General settings --- {{{
 set t_Co=256
-color torte
+color jellybeans
 syntax on
 set nu
 set smartindent 
