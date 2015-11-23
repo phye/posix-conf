@@ -1,0 +1,9 @@
+[user]
+	name = Philip Ye
+	email = phye@cisco.com
+[core]
+	editor = vim
+[push]
+	default = simple
+[alias]
+	discard = "checkout -- "
