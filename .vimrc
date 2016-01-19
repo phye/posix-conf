@@ -12,16 +12,17 @@ set splitright
 set nocompatible
 set incsearch
 set laststatus=2
-set statusline=
-set statusline+=%n\  
-set statusline+=%.40F\ %y\ %m%=
-set statusline+=%4l/%4L\   
-set statusline+=0x%03B\  
+"set statusline=
+"set statusline+=%n\  
+"set statusline+=%.40F\ %y\ %m%=
+"set statusline+=%4l/%4L\   
+"set statusline+=0x%03B\  
 set cursorline
 filetype off
 filetype plugin indent on   
 set completeopt=menu
 set backspace=indent,eol,start
+
 " }}}
 
 "Some autocmds --- {{{
@@ -55,6 +56,19 @@ augroup filetype_make
     autocmd FileType make set sts=4
     autocmd FileType make set ts=4
 augroup END
+augroup filetype_mkd
+    autocmd!
+    autocmd FileType make set noet
+    autocmd FileType make set sts=4
+    autocmd FileType make set ts=4
+augroup END
+augroup filetype_go
+    autocmd!
+    autocmd FileType go set noet
+    autocmd FileType go set sts=4
+    autocmd FileType go set ts=4
+	autocmd FileType go NeoCompleteEnable
+augroup END
 " }}}
 
 "Some maps --- {{{
@@ -74,6 +88,8 @@ nnoremap <leader>pba :execute "aboveleft split " . bufname("#")<cr>
 nnoremap <leader>pbb :execute "belowright split " . bufname("#")<cr>
 nnoremap <leader>bt :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q .<cr><cr>
 nnoremap <leader>ast :set tags+=/ws/phye/stl/tags<cr>
+nnoremap <F2> : set invpaste paste?<CR>
+set pastetoggle=<F2>
 
 inoremap jk <ESC>
 "inoremap <ESC> <nop>
@@ -89,6 +105,7 @@ abbrev ====== ===========================================================
 abbrev ////// ///////////////////////////////////////////////////////////
 abbrev #i #include
 abbrev #d #define
+abbrev #p #!/usr/bin/perl
 " }}}
 
 " Misc --- {{{
@@ -136,16 +153,33 @@ let Tlist_Exit_OnlyWindow=1
 let g:winManagerWindowLayout='FileExplorer|TagList'
 nnoremap wm :WMToggle<cr>
 
+"mark related
+hi MarkWord7  ctermbg=DarkCyan     ctermfg=Black  guibg=#8CCBEA    guifg=Black
+hi MarkWord8  ctermbg=DarkGreen    ctermfg=Black  guibg=#A4E57E    guifg=Black
+hi MarkWord9  ctermbg=DarkYellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
+hi MarkWord10  ctermbg=DarkRed      ctermfg=Black  guibg=#FF7272    guifg=Black
+hi MarkWord11  ctermbg=DarkMagenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
+hi MarkWord12  ctermbg=DarkBlue     ctermfg=Black  guibg=#9999FF    guifg=Black
+
 "cscope related
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 set cspc=5
 
 "vimwiki related
-let wiki_1 = {'path': '$HOME/vimwiki/Work',
-            \ 'path_html' : '$HOME/vimwiki/Work/html'}
-let wiki_2 = {'path': '$HOME/vimwiki/Learn',
-            \ 'path_html' : '$HOME/vimwiki/Learn/html'}
+let wiki_1 = {}
+let wiki_1.path = '$HOME/vimwiki/Work'
+let wiki_1.path_html = '$HOME/vimwiki/Work/html'
+let wiki_2 = {}
+let wiki_2.path = '$HOME/vimwiki/Learn'
+let wiki_2.path_html = '$HOME/vimwiki/Learn/html'
 let g:vimwiki_list = [wiki_1, wiki_2]
+
+"vim-airline
+let g:airline_powerline_fonts = 1
+"let g:airline#extensions#tabline#enabled = 1
+
+"vim-easymotion
+let g:EasyMotion_leader_key = '<Space>'
 " }}}
 
 " Cross platform support --- {{{
