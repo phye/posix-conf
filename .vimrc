@@ -153,26 +153,9 @@ let Tlist_Exit_OnlyWindow=1
 let g:winManagerWindowLayout='FileExplorer|TagList'
 nnoremap wm :WMToggle<cr>
 
-"mark related
-hi MarkWord7  ctermbg=DarkCyan     ctermfg=Black  guibg=#8CCBEA    guifg=Black
-hi MarkWord8  ctermbg=DarkGreen    ctermfg=Black  guibg=#A4E57E    guifg=Black
-hi MarkWord9  ctermbg=DarkYellow   ctermfg=Black  guibg=#FFDB72    guifg=Black
-hi MarkWord10  ctermbg=DarkRed      ctermfg=Black  guibg=#FF7272    guifg=Black
-hi MarkWord11  ctermbg=DarkMagenta  ctermfg=Black  guibg=#FFB3FF    guifg=Black
-hi MarkWord12  ctermbg=DarkBlue     ctermfg=Black  guibg=#9999FF    guifg=Black
-
 "cscope related
 set cscopequickfix=s-,c-,d-,i-,t-,e-
 set cspc=5
-
-"vimwiki related
-let wiki_1 = {}
-let wiki_1.path = '$HOME/vimwiki/Work'
-let wiki_1.path_html = '$HOME/vimwiki/Work/html'
-let wiki_2 = {}
-let wiki_2.path = '$HOME/vimwiki/Learn'
-let wiki_2.path_html = '$HOME/vimwiki/Learn/html'
-let g:vimwiki_list = [wiki_1, wiki_2]
 
 "vim-airline
 let g:airline_powerline_fonts = 1
@@ -199,3 +182,22 @@ let g:EasyMotion_leader_key = '<Space>'
 "endif
 "" }}}
 
+nnoremap <C-W>O :call MaximizeToggle()<CR>
+nnoremap <C-W>o :call MaximizeToggle()<CR>
+nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
+
+function! MaximizeToggle()
+    if exists("s:maximize_session")
+        exec "source " . s:maximize_session
+        call delete(s:maximize_session)
+        unlet s:maximize_session
+        let &hidden=s:maximize_hidden_save
+        unlet s:maximize_hidden_save
+    else
+        let s:maximize_hidden_save = &hidden
+        let s:maximize_session = tempname()
+        set hidden
+        exec "mksession! " . s:maximize_session
+        only
+    endif
+endfunction
