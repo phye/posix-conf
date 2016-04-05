@@ -22,6 +22,8 @@ filetype off
 filetype plugin indent on   
 set completeopt=menu
 set backspace=indent,eol,start
+set wfh
+set wfw
 
 " }}}
 
@@ -40,7 +42,7 @@ augroup filetype_script
 augroup END
 augroup filetype_xml
     autocmd!
-    autocmd BufWritePre *.html :normal gg=G
+    "autocmd BufWritePre *.html :normal gg=G
     autocmd FileType xml,html noremap <buffer> <leader>c I<!--><esc>A<--><esc>
     autocmd FileType xml,html noremap <buffer> <leader>d ^5x$3h4x
 augroup END
@@ -69,6 +71,9 @@ augroup filetype_go
     autocmd FileType go set ts=4
 	autocmd FileType go NeoCompleteEnable
 augroup END
+augroup HightTODO
+    autocmd!
+    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE', -1)
 " }}}
 
 "Some maps --- {{{
