@@ -12,11 +12,6 @@ set splitright
 set nocompatible
 set incsearch
 set laststatus=2
-"set statusline=
-"set statusline+=%n\  
-"set statusline+=%.40F\ %y\ %m%=
-"set statusline+=%4l/%4L\   
-"set statusline+=0x%03B\  
 set cursorline
 filetype off
 filetype plugin indent on   
@@ -69,11 +64,12 @@ augroup filetype_go
     autocmd FileType go set noet
     autocmd FileType go set sts=4
     autocmd FileType go set ts=4
-	autocmd FileType go NeoCompleteEnable
+    autocmd FileType go NeoCompleteEnable
 augroup END
 augroup HightTODO
     autocmd!
     autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE', -1)
+augroup END
 " }}}
 
 "Some maps --- {{{
@@ -104,24 +100,9 @@ inoremap jk <ESC>
 "Some Abbreviations --- {{{
 abbrev adn and
 abbrev teh the
-abbrev ###### ###########################################################
-abbrev ------ -----------------------------------------------------------
-abbrev ====== ===========================================================
-abbrev ////// ///////////////////////////////////////////////////////////
 abbrev #i #include
 abbrev #d #define
 abbrev #p #!/usr/bin/perl
-" }}}
-
-" Misc --- {{{
-"To get alt key work
-let c='a'
-while c <= 'z'
-    exec "set <A-".c.">=\e".c
-    exec "imap \e".c." <A-".c.">"
-    let c = nr2char(1+char2nr(c))
-endw
-set timeout ttimeoutlen=50
 " }}}
 
 "Plugin specific --- {{{
@@ -136,13 +117,6 @@ call pathogen#infect()
 "For command-t
 nnoremap ,t :CommandT<CR>
 let g:CommandTMaxFiles=20000
-
-"For SuperTab
-"let g:SuperTabRetainCompletionType=2
-"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
-
-"For NERD
-let g:NERDTreeDirArrows=0
 
 "For OmniCppComplete
 let OmniCpp_MayCompleteDot=1
@@ -165,28 +139,15 @@ set cspc=5
 "vim-airline
 let g:airline_powerline_fonts = 1
 "let g:airline#extensions#tabline#enabled = 1
-
-"vim-easymotion
-let g:EasyMotion_leader_key = '<Space>'
+"
+"neocomplete related
+let g:neocomplete#enable_at_startup=1
+"let g:neocomplete#sources#omni#functions.javascript = [
+"            \ 'tern#Complete',
+"            \ ]
 " }}}
 
-" Cross platform support --- {{{
-"let arch = substitute(system('uname -m'), '\n','','')
-"if arch ==? "x86_64"
-"    echo "Using x86_64 settings, YCM will be loaded"
-"    "YCM related
-"    "Bundle 'Valloric/YouCompleteMe'
-"    "nmap jd :YcmCompleter GoToDefinitionElseDeclaration<cr>
-"    "nmap <leader>jd :YcmCompleter GoToDefinition<cr>
-"    "let g:ycm_collect_identifiers_from_tag_files=1
-"    "let g:ycm_autoclose_preview_window_after_completion=1
-"    "let g:ycm_autoclose_preview_window_after_insertation=1
-"    "let g:ycm_confirm_extra_conf =0
-"else"
-"    echo "Using i686 settings, YCM will not be loaded"
-"endif
-"" }}}
-
+"{{{ Misc functions
 nnoremap <C-W>O :call MaximizeToggle()<CR>
 nnoremap <C-W>o :call MaximizeToggle()<CR>
 nnoremap <C-W><C-O> :call MaximizeToggle()<CR>
@@ -206,3 +167,4 @@ function! MaximizeToggle()
         only
     endif
 endfunction
+"}}}
