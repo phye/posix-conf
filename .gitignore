@@ -1,4 +1,4 @@
 *.o
 *.a
-*.swap
+*.swp
 .gitignore
