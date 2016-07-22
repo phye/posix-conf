@@ -1,0 +1,39 @@
+# Lines configured by zsh-newuser-install
+HISTFILE=~/.histfile
+HISTSIZE=5000
+SAVEHIST=5000
+setopt inc_append_history appendhistory autocd extendedglob nomatch
+bindkey -e
+# End of lines configured by zsh-newuser-install
+# The following lines were added by compinstall
+
+#autoload -Uz compinit
+#compinit
+# End of lines added by compinstall
+
+
+autoload edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
+
+alias ls='ls --color'
+alias gs='git status'
+
+hash -d sm=/ws/v2p-master/services/system/service-mgr/src/node
+hash -d ds=/ws/v2p-master/services/system/docserver/src/node
+hash -d aicm=/ws/v2p-master/services/system/aicm/src/node
+hash -d rm=/ws/v2p-master/services/system/resource-mgr/src/node
+hash -d mfcm=/ws/v2p-master/services/system/mfcm/src/node
+hash -d picm=/ws/v2p-master/services/system/picm/src/node
+hash -d common=/ws/v2p-master/services/common
+hash -d aic=/ws/v2p-master/services/common/aic/src/node
+hash -d mflib=/ws/v2p-master/services/common/mflib/src/node
+hash -d sd=/ws/v2p-master/services/common/service-discovery/src/node
+hash -d sys=/ws/v2p-master/services/system
+hash -d v2p=/ws/v2p-master
+hash -d vmgr=/ws/v2p-master/platform/v2p-vm-mgr/src/python/vm_manager
+hash -d install=/ws/v2p-master/platform/v2p-node-provision/src/scripts
+hash -d bs=/ws/v2p-master/platform/v2p-vm-mgr/src/python/vm_manager/bootstrap
+hash -d auto=/ws/v2p-master/automation
+
+source ~/.shrc_phye
