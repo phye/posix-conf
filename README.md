@@ -44,3 +44,12 @@ To enable command-t plugin for vim, do the following things:
 On hitting tgetent() error during configure, run 'yum install ncurses-devel'
 
 
+Oh My Zshell
+------------
+Refer to the project link [https://github.com/robbyrussell/oh-my-zsh]. Commands to install is:
+  
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+If you want to change default shell to zsh,
+  
+    chsh -s /bin/zsh
