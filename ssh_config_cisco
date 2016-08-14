@@ -21,6 +21,3 @@ host binexec
     hostname 10.124.26.35
     user root
 
-host phye
-    hostname 115.28.55.23
-    user phye
