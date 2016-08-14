@@ -1,48 +1,26 @@
-HOST psos
-    hostname 10.75.168.50
-    User admin
-
-HOST psclnt
-    hostname 10.75.168.53
-    User admin
-
-HOST pa
-    hostname 10.75.168.52
-    User admin
-
-HOST pa1
-    hostname 10.74.27.200
-    User admin
-
-HOST pal
+host ws
     hostname 10.75.168.20
-    User admin
+    user admin
+host build
+    hostname 10.75.168.5
+    user admin
 
-HOST pf
+host misc
     hostname 10.75.168.51
-    User admin
+    user admin
 
-HOST pf1
-    hostname 10.75.168.4
-    User admin
+host jinexec
+    hostname 10.124.26.21
+    user root
 
-Host mosclnt
-    hostname 10.74.26.117
-    User root
+host execsjc
+    hostname 172.19.120.249
+    user root
 
-Host cs
-    hostname 172.20.206.54
-    User phye
+host binexec
+    hostname 10.124.26.35
+    user root
 
-Host cidns
-    hostname 10.79.56.151
-    User root
-
-Host ciclnt
-    hostname 10.79.56.152
-    User admin
-
-Host cibuild
-    hostname 172.29.70.36
-    User root
-
+host phye
+    hostname 115.28.55.23
+    user phye
