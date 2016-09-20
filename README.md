@@ -62,3 +62,25 @@ To use phye's own theme, add phye's repo first
 
 Then update .zshrc to use `phye` theme
     
+TPM
+---
+To use TPM (TMUX Plugin Manager), refer to project link [https://github.com/tmux-plugins/tpm]. Command 
+to install is:
+
+    $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
+And update .tmux.conf as below:
+
+    # List of plugins
+    set -g @plugin 'tmux-plugins/tpm'
+    set -g @plugin 'tmux-plugins/tmux-sensible'
+
+    # Other examples:
+    # set -g @plugin 'github_username/plugin_name'
+    # set -g @plugin 'git@github.com/user/plugin'
+    # set -g @plugin 'git@bitbucket.com/user/plugin'
+
+    # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
+    run '~/.tmux/plugins/tpm/tpm'
+
+Source tmux config and use `C-a + I` to install plugins.
