@@ -53,3 +53,12 @@ Refer to the project link [https://github.com/robbyrussell/oh-my-zsh]. Commands 
 If you want to change default shell to zsh,
   
     chsh -s /bin/zsh
+
+To use phye's own theme, add phye's repo first
+
+    cd ~/.oh-my-zsh
+    git remote add phye git@github.com:phye/oh-my-zsh.git
+    git fetch phye
+
+Then update .zshrc to use `phye` theme
+    
