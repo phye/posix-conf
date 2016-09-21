@@ -1,12 +1,12 @@
 host dev
-    hostname 121.41.77.248
+    hostname 115.28.55.23
     user root
 
 host gitdev
-    hostname 121.41.77.248
+    hostname 115.28.55.23
     user root
 
 host phye
-    hostname 121.41.77.248
+    hostname 115.28.55.23
     user phye
 
