@@ -145,6 +145,12 @@ let g:neocomplete#enable_at_startup=1
 "let g:neocomplete#sources#omni#functions.javascript = [
 "            \ 'tern#Complete',
 "            \ ]
+"vim-easymotion
+let g:EasyMotion_leader_key = '<Space>'
+
+"emmet-vim
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
 " }}}
 
 "{{{ Misc functions
