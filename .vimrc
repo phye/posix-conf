@@ -65,7 +65,6 @@ augroup filetype_go
     autocmd FileType go set noet
     autocmd FileType go set sts=4
     autocmd FileType go set ts=4
-    autocmd FileType go NeoCompleteEnable
 augroup END
 augroup HightTODO
     autocmd!
@@ -94,8 +93,8 @@ nnoremap <F2> : set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 inoremap jk <ESC>
+vnoremap jk <ESC>
 "inoremap <ESC> <nop>
-"vnoremap jk <ESC>
 " }}}
 
 "Some Abbreviations --- {{{
@@ -115,9 +114,9 @@ call pathogen#infect()
 "call vundle#rc()
 "Bundle 'gmarik/vundle'
 
-"For command-t
-nnoremap ,t :CommandT<CR>
-let g:CommandTMaxFiles=20000
+"For SuperTab
+"let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
 
 "For OmniCppComplete
 let OmniCpp_MayCompleteDot=1
@@ -152,6 +151,9 @@ let g:EasyMotion_leader_key = '<Space>'
 "emmet-vim
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+"Powerful Unite!
+nnoremap <C-p> :Unite file_rec/async<cr>
 " }}}
 
 "{{{ Misc functions
