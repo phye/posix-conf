@@ -14,6 +14,11 @@ alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
 
 export PATH="$HOME/bin/phye:$HOME/bin/sanity:$HOME/bin:$PATH"
 export EDITOR='vim'
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 
 export HISTCONTROL=ignoredups:erasedups
 export PROMT_COMMAND="history -a; history -c; history -r; $PROMT_COMMAND"
+
+export GOPATH=~/ws/go
+export PATH=$PATH:$GOPATH/bin
