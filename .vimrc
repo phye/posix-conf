@@ -18,6 +18,8 @@ filetype off
 filetype plugin indent on   
 set completeopt=menu
 set backspace=indent,eol,start
+set tw=100
+set colorcolumn=100
 set wfh
 set wfw
 
@@ -51,20 +53,15 @@ augroup END
 augroup filetype_make
     autocmd!
     autocmd FileType make set noet
-    autocmd FileType make set sts=4
-    autocmd FileType make set ts=4
 augroup END
 augroup filetype_mkd
     autocmd!
-    autocmd FileType make set noet
-    autocmd FileType make set sts=4
-    autocmd FileType make set ts=4
+    autocmd FileType mkd set tw=140
+    autocmd FileType mkd set colorcolumn=140
 augroup END
 augroup filetype_go
     autocmd!
-    autocmd FileType go set noet
-    autocmd FileType go set sts=4
-    autocmd FileType go set ts=4
+    autocmd FileType go NeoCompleteEnable
 augroup END
 augroup HightTODO
     autocmd!
