@@ -63,6 +63,12 @@ augroup filetype_go
     autocmd!
     autocmd FileType go NeoCompleteEnable
 augroup END
+augroup filetype_yaml
+    autocmd!
+    autocmd FileType yaml set sts=2
+    autocmd FileType yaml set ts=2
+    autocmd FileType yaml set sw=2
+augroup END
 augroup HightTODO
     autocmd!
     autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE', -1)
@@ -90,7 +96,6 @@ nnoremap <F2> : set invpaste paste?<CR>
 set pastetoggle=<F2>
 
 inoremap jk <ESC>
-vnoremap jk <ESC>
 "inoremap <ESC> <nop>
 " }}}
 
