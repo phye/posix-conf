@@ -12,13 +12,12 @@ else
 fi
 
 cd $V2PC_ROOT
-tmux -2 new-session -d -s $SESSION -n 'v2p' -c $V2PC_ROOT
-tmux -2 new-window -t $SESSION:1 -n 'v2p' 
-tmux -2 new-window -t $SESSION:2 -n 'v2p'
-tmux -2 new-window -t $SESSION:3 -n 'v2p' 
-tmux -2 new-window -t $SESSION:4 -n 'v2p'
-tmux -2 kill-window -t $SESSION:0
-tmux -2 link-window -d -s shared:sco -t 0 
+tmux -2 new-session -d -s $SESSION -c $V2PC_ROOT
+tmux -2 new-window -t $SESSION:1 
+tmux -2 new-window -t $SESSION:2 
+tmux -2 new-window -t $SESSION:3 
+tmux -2 new-window -t $SESSION:4 
+tmux -2 link-window -d -s shared:sco -t 5
 
 tmux -2 select-window -t $SESSION:0
 tmux -2 attach-session -d -t $SESSION
