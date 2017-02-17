@@ -151,8 +151,9 @@ let g:neocomplete#enable_at_startup=1
 let g:EasyMotion_leader_key = '<Space>'
 
 "emmet-vim
-let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+"let g:user_emmet_install_global = 0
+"autocmd FileType html,css EmmetInstall
+let g:user_emmet_mode='a'
 
 "Powerful Unite!
 nnoremap <C-p> :Unite file_rec/async<cr>
