@@ -83,4 +83,4 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 source ~/.shrc_phye
-source ~/.zshrc.pre-oh-my-zsh
+source ~/.zshrc.phye

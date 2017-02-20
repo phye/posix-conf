@@ -3,22 +3,12 @@ alias ll="ls -al"
 alias tmuxn="tmux -2 new-session -s"
 alias tmuxa="tmux -2 attach-session -t"
 alias grep="grep -I"
-alias ga="git add"
-alias gc="git clone"
-alias gco="git commit"
-alias gd="git diff"
-alias gl="git log"
-alias gll="git log -p -1"
-alias gs="git status"
 alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
 
 export PATH="$HOME/bin/phye:$HOME/bin/sanity:$HOME/bin:$PATH"
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
-export HISTCONTROL=ignoredups:erasedups
-export PROMT_COMMAND="history -a; history -c; history -r; $PROMT_COMMAND"
 
 export GOPATH=~/ws/go
 export PATH=$PATH:$GOPATH/bin
