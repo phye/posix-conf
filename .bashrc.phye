@@ -31,4 +31,4 @@ else
 fi
 
 # Source all common setups for bash/zsh
-source ~/.shrc_phye
+source ~/.shrc.phye

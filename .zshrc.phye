@@ -16,12 +16,9 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
-alias ls='ls --color'
-alias gs='git status'
-
 hash -d sm=/ws/v2p-master/services/system/service-mgr/src/node
 hash -d ds=/ws/v2p-master/services/system/docserver/src/node
-hash -d aicm=/ws/v2p-master/services/system/aicm/src/node
+hash -d aicm=/ws/v2p-master/services/system/aicm/src/node/server
 hash -d rm=/ws/v2p-master/services/system/resource-mgr/src/node
 hash -d mfcm=/ws/v2p-master/services/system/mfcm/src/node
 hash -d picm=/ws/v2p-master/services/system/picm/src/node
@@ -35,5 +32,26 @@ hash -d vmgr=/ws/v2p-master/platform/v2p-vm-mgr/src/python/vm_manager
 hash -d install=/ws/v2p-master/platform/v2p-node-provision/src/scripts
 hash -d bs=/ws/v2p-master/platform/v2p-vm-mgr/src/python/vm_manager/bootstrap
 hash -d auto=/ws/v2p-master/automation
+hash -d app=/ws/v2p-master/services/application
+hash -d um=/ws/v2p-master/services/system/upgrade-mgr
+hash -d pm=/ws/v2p-master/goroot/src/v2pc/package-mgr
 
-source ~/.shrc_phye
+hash -d osm=/ws/v2p-master-ro/services/system/service-mgr/src/node
+hash -d ods=/ws/v2p-master-ro/services/system/docserver/src/node
+hash -d oaicm=/ws/v2p-master-ro/services/system/aicm/src/node
+hash -d orm=/ws/v2p-master-ro/services/system/resource-mgr/src/node
+hash -d omfcm=/ws/v2p-master-ro/services/system/mfcm/src/node
+hash -d opicm=/ws/v2p-master-ro/services/system/picm/src/node
+hash -d ocommon=/ws/v2p-master-ro/services/common
+hash -d oaic=/ws/v2p-master-ro/services/common/aic/src/node
+hash -d omflib=/ws/v2p-master-ro/services/common/mflib/src/node
+hash -d osd=/ws/v2p-master-ro/services/common/service-discovery/src/node
+hash -d osys=/ws/v2p-master-ro/services/system
+hash -d ov2p=/ws/v2p-master-ro
+hash -d ovmgr=/ws/v2p-master-ro/platform/v2p-vm-mgr/src/python/vm_manager
+hash -d oinstall=/ws/v2p-master-ro/platform/v2p-node-provision/src/scripts
+hash -d obs=/ws/v2p-master-ro/platform/v2p-vm-mgr/src/python/vm_manager/bootstrap
+hash -d oauto=/ws/v2p-master-ro/automation
+hash -d oapp=/ws/v2p-master-ro/services/application
+
+source ~/.shrc.phye
