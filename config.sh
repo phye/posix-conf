@@ -9,7 +9,6 @@ mkdir -p $HOME/bin/
 /bin/cp -r sanity $HOME/bin/ 2>/dev/null
 
 cat ssh_config >> ~/.ssh/config
-cat ssh_config_cisco >> ~/.ssh/config
 
 echo "Appending .bashrc to include configs for phye"
 BASHRC_FILE=$HOME/.bashrc
