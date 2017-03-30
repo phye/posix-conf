@@ -54,4 +54,7 @@ hash -d obs=/ws/v2p-master-ro/platform/v2p-vm-mgr/src/python/vm_manager/bootstra
 hash -d oauto=/ws/v2p-master-ro/automation
 hash -d oapp=/ws/v2p-master-ro/services/application
 
+hash -d webdev=~/ws/webdev
+hash -d notes=~/ws/OrgNotes
+
 source ~/.shrc.phye
