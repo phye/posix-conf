@@ -21,3 +21,5 @@ export LANG=en_US.UTF-8
 
 export GOPATH=~/ws/go
 export PATH=$PATH:$GOPATH/bin
+
+PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++')
