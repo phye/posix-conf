@@ -160,6 +160,9 @@ let g:user_emmet_mode='a'
 
 "Powerful Unite!
 nnoremap <C-p> :Unite file_rec/async<cr>
+
+"delimitMate"
+let delimitMate_expand_cr = 1
 " }}}
 
 "{{{ Misc functions
