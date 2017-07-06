@@ -71,9 +71,10 @@ augroup filetype_yaml
 augroup END
 augroup HightTODO
     autocmd!
-    autocmd WinEnter,VimEnter * :silent! call matchadd('Todo', 'NOTE', -1)
+    autocmd WinEnter,VimEnter * :silent! call matchadd('airline_warning', '\(TODO:\?\)', -1)
+    autocmd WinEnter,VimEnter * :silent! call matchadd('DbgCurrent', '\(\(FIXME\)\|\(NOTE\)\):\?', -1)
 augroup END
-" }}}
+"}}}
 
 "Some maps --- {{{
 let mapleader=","
