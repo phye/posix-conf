@@ -11,10 +11,12 @@ bindkey -e
 #compinit
 # End of lines added by compinstall
 
-
 autoload edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
+
+alias gs='git status'
+alias dh='dirs -v'
 
 hash -d sm=/ws/v2p-master/services/system/service-mgr/src/node
 hash -d ds=/ws/v2p-master/services/system/docserver/src/node
