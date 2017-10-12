@@ -59,4 +59,5 @@ hash -d oapp=/ws/v2p-master-ro/services/application
 hash -d webdev=~/ws/webdev
 hash -d notes=~/ws/OrgNotes
 
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 source ~/.shrc.phye

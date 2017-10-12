@@ -1,8 +1,7 @@
 Philip's Configuration for POSIX Environment
 ============================================
 
-Prerequisite
-------------
+# Prerequisite
 
 Prepare for git
 
@@ -13,8 +12,7 @@ Before push, need to add remote host by the following cmd:
 
     $git remote add short_name git@$remote_host:$remote_path
 
-Oh My Zshell
-------------
+# Oh My Zshell
 Refer to the project link [https://github.com/robbyrussell/oh-my-zsh]. Commands to install is:
   
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
@@ -31,8 +29,7 @@ To use phye's own theme, add phye's repo first
 
 Then update .zshrc to use `phye` theme
     
-TPM
----
+# TPM
 To use TPM (TMUX Plugin Manager), refer to project link [https://github.com/tmux-plugins/tpm]. Command 
 to install is:
 
@@ -53,3 +50,12 @@ And update .tmux.conf as below:
     run '~/.tmux/plugins/tpm/tpm'
 
 Source tmux config and use `C-a + I` to install plugins.
+
+# Recommendations
+Command line utils recommended to install are:
+  
+    - tmux
+    - ctags
+    - zsh
+    - oh-my-zsh
+    - fzf

@@ -32,3 +32,4 @@ fi
 
 # Source all common setups for bash/zsh
 source ~/.shrc.phye
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
