@@ -165,6 +165,10 @@ nnoremap <C-p> :Unite file_rec/async<cr>
 
 "delimitMate"
 let delimitMate_expand_cr = 1
+
+"fzf
+nnoremap <leader>f :Files<cr>
+nnoremap <leader>c :Commits<cr>
 " }}}
 
 "{{{ Misc functions
