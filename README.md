@@ -59,3 +59,9 @@ Command line utils recommended to install are:
     - zsh
     - oh-my-zsh
     - fzf
+
+# Emacs like key bindings for google-chrome in plasma 5
+Set `gtk-key-theme-name` to `Emacs` in ~/.config/gtk-3.0/settings.ini, and restart chrome. 
+
+    [Settings]
+    gtk-key-theme-name = Emacs
