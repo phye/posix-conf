@@ -100,6 +100,11 @@ inoremap jk <ESC>
 "inoremap <ESC> <nop>
 " }}}
 
+"Some commands --- {{{
+":ScratchBuffer makes current buffer disposable
+command! ScratchBuffer setlocal buftype=nofile bufhidden=hide noswapfile
+" }}}
+
 "Some Abbreviations --- {{{
 abbrev adn and
 abbrev teh the
