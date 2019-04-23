@@ -23,7 +23,7 @@ export LANG=en_US.UTF-8
 export GOPATH=~/ws/go
 export PATH=$PATH:$GOPATH/bin
 
-PATH=$(echo "$PATH" | awk -v RS=':' -v ORS=":" '!a[$1]++')
+PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
 function v () {
     vim -c ScratchBuffer -
