@@ -2,7 +2,7 @@
 	path = modules/emacs.d
 	url = https://github.com/phye/emacs.d.git
 [submodule "modules/on-my-zsh"]
-	path = modules/on-my-zsh
+	path = modules/oh-my-zsh
 	url = https://github.com/phye/oh-my-zsh.git
 [submodule "modules/tpm"]
 	path = modules/tpm
