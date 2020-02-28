@@ -9,6 +9,9 @@ alias dh='dirs -v'
 # Tmux Alias {{{
 alias tmuxn="tmux -2 new-session -s"
 alias tmuxa="tmux -2 attach-session -t"
+alias tfp="tmux_find_pts"
+alias tfc="tmux_find_command"
+alias tfph="tmux_find_path"
 # }}}
 
 # Curl Aliases {{{
@@ -52,17 +55,17 @@ function mpd() {
 
 # Tmux Functions
 function tmux_find_pts() {
-    result=$(tmux list-panes -a -F 'S: #S, W: #W, P: #P #{pane_tty}' | grep "/dev/pts/$1")
+    result=$(tmux list-panes -a -F 'S: #S, W: #I, P: #P #{pane_tty}' | grep "/dev/pts/$1")
     echo $result
 }
 
 function tmux_find_command() {
-    result=$(tmux list-panes -a -F 'S: #S, W: #W, P: #P #{pane_current_command}' | grep "$1")
+    result=$(tmux list-panes -a -F 'S: #S, W: #I, P: #P #{pane_current_command}' | grep "$1")
     echo $result
 }
 
 function tmux_find_path() {
-    result=$(tmux list-panes -a -F 'S: #S, W: #W, P: #P #{pane_current_path}' | grep "$1")
+    result=$(tmux list-panes -a -F 'S: #S, W: #I, P: #P #{pane_current_path}' | grep "$1")
     echo $result
 }
 # }}}
