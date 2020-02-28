@@ -29,7 +29,7 @@ alias gs='git status'
 # }}}
 
 # ENVs {{{
-export PATH="$HOME/bin/phye:$HOME/bin/sanity:$HOME/bin:$PATH"
+export PATH="$HOME/bin/scripts:$HOME/bin:$PATH"
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
