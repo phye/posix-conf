@@ -82,4 +82,4 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-[ -f ~/.zshrc.phye ] && source ~/.zshrc.phye
+[ -f ~/.zshrc.phye.sh ] && source ~/.zshrc.phye.sh

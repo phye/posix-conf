@@ -3,6 +3,7 @@ alias ls="ls --color"
 alias ll="ls -al"
 alias grep="grep -I"
 alias cmake='cmake3'
+alias dh='dirs -v'
 # }}}
 
 # Tmux Alias {{{
@@ -21,6 +22,10 @@ alias delete='curl -kv -X DELETE'
 alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
 alias ed="emacs --daemon=$(tmux display-message -p '#S')"
 alias ec="emacsclient -nw --socket=$(tmux display-message -p '#S')"
+# }}}
+
+# Git Alias {{{
+alias gs='git status'
 # }}}
 
 # ENVs {{{
