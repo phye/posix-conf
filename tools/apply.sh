@@ -1,7 +1,6 @@
 #!/bin/bash
 # Exit on any error!
 set -e
-alias lnd='ln -sT -b'
 
 # TODO(phye): replace ROOT_DIR dynamically
 GITDIR=$(pwd)
@@ -9,10 +8,12 @@ mkdir -p ${HOME}
 mkdir -p ${HOME}/bin
 mkdir -p ${HOME}/.tmux/plugins/
 
+source ${GITDIR}/scripts/aliases.sh
+
 echo "1. Configure all submodules"
 # vim
 lnd -f ${GITDIR}/modules/vim.d/vim/ ~/.vim
-ln -sfb ${GITDIR}/modules/vim.d/vimrc ~/.vimrc
+lnf -f ${GITDIR}/modules/vim.d/vimrc ~/.vimrc
 
 # emacs
 lnd -f ${GITDIR}/modules/emacs.d/ ~/.emacs.d
@@ -25,17 +26,17 @@ lnd -f ${GITDIR}/modules/tpm/ ~/.tmux/plugins/tpm
 
 echo "2. Link all common configs"
 # git
-ln -sfb ${GITDIR}/configs/git/gitconfig ~/.gitconfig
+lnf -f ${GITDIR}/configs/git/gitconfig ~/.gitconfig
 
 # shell
-ln -sfb ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
-ln -sfb ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
-ln -sfb ${GITDIR}/configs/shell/bashrc.phye.sh ~/.bashrc.phye.sh
-ln -sfb ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
-ln -sfb ${GITDIR}/configs/shell/zshrc.sh ~/.zshrc
+lnf -f ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
+lnf -f ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
+lnf -f ${GITDIR}/configs/shell/bashrc.phye.sh ~/.bashrc.phye.sh
+lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
+lnf -f ${GITDIR}/configs/shell/zshrc.sh ~/.zshrc
 
 # tmux
-ln -sfb ${GITDIR}/configs/tmux/tmux.conf ~/.tmux.conf
+lnf -f ${GITDIR}/configs/tmux/tmux.conf ~/.tmux.conf
 
 echo "3. Patching existing configs"
 # bash
