@@ -10,3 +10,6 @@
 [submodule "modules/vim.d"]
 	path = modules/vim.d
 	url = https://github.com/phye/vim.d.git
+[submodule "modules/gitignore"]
+	path = modules/gitignore
+	url = https://github.com/github/gitignore.git
