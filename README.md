@@ -1,66 +1,51 @@
-Philip's Configuration for POSIX Environment
-============================================
+phye's Configuration for POSIX Environment
+==========================================
 
-# Prerequisite
+# Intro
+Most of my daily works are finished on an mbp 2017 running macOS
+10.15, with macOS as the platform for docs (and wechatting :-) and a
+remote CentOS Linux VM (which will be ssh-ed to from the macOS) as the 
+platform for coding. I also have an ArchLinux (which is my favorate
+Linux distro) with i3 as DM at home where I may do some other tasks
+that's not suitable at the macOS mentioned above.
 
-Prepare for git
+Very often, when I configured some *fancy* thing at one machine (which
+of course should be cross platformed, such as some conf for tmux or
+shell), I failed to find the same config in another due to the
+following reasons:
 
-    $git config user.name "Philip Ye"
-    $git config user.email "phye@cisco.com"
+  - Difficulties to sync configs among three kinds of OS
+  - Compliance issues between tools in different OS, such as '-c' flag
+    of ls
+  - Subtle but annoying difference related to path, such as the place of
+    pip dir 
 
-Before push, need to add remote host by the following cmd:
+I've been thinking for quite a long time to find a solution for this
+problem and this repo is my first attempt. By maintaining one repo and
+one branch for all POSIX compliant systems (mainly for Linux and
+macOS, though), I can minimize the efforts to sync my configs.
 
-    $git remote add short_name git@$remote_host:$remote_path
+# Usage
+Simply clone this repo and run the `apply.sh` within tools folder and
+we're done
+```sh
+git clone --recurse-submodules https://github.com/phye/posix-conf.git /path/to/posix-conf
+cd /path/to/posix-conf
+sh ./tools/apply.sh
+```
 
-# Oh My Zshell
-Refer to the project link [https://github.com/robbyrussell/oh-my-zsh]. Commands to install is:
+# CLI tools list
+My personal CLI selections are:
   
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+  - tmux 
+  - tpm (tmux plugin manager)
+  - emacs (with evil mode to mimic vim)
+  - vim
+  - zsh(oh-my-zsh)
+  - fzf
 
-If you want to change default shell to zsh,
-  
-    chsh -s /bin/zsh
-
-To use phye's own theme, add phye's repo first
-
-    cd ~/.oh-my-zsh
-    git remote add phye git@github.com:phye/oh-my-zsh.git
-    git fetch phye
-
-Then update .zshrc to use `phye` theme
-    
-# TPM
-To use TPM (TMUX Plugin Manager), refer to project link [https://github.com/tmux-plugins/tpm]. Command 
-to install is:
-
-    $ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-
-And update .tmux.conf as below:
-
-    # List of plugins
-    set -g @plugin 'tmux-plugins/tpm'
-    set -g @plugin 'tmux-plugins/tmux-sensible'
-
-    # Other examples:
-    # set -g @plugin 'github_username/plugin_name'
-    # set -g @plugin 'git@github.com/user/plugin'
-    # set -g @plugin 'git@bitbucket.com/user/plugin'
-
-    # Initialize TMUX plugin manager (keep this line at the very bottom of tmux.conf)
-    run '~/.tmux/plugins/tpm/tpm'
-
-Source tmux config and use `C-a + I` to install plugins.
-
-# Recommendations
-Command line utils recommended to install are:
-  
-    - tmux
-    - ctags
-    - zsh
-    - oh-my-zsh
-    - fzf
-
-# Emacs like key bindings for google-chrome in plasma 5
+# Hints
+## Emacs like key bindings for google-chrome in plasma 5
 Set `gtk-key-theme-name` to `Emacs` in ~/.config/gtk-3.0/settings.ini, and restart chrome. 
 
     [Settings]
