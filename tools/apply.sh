@@ -26,6 +26,7 @@ lnd -f ${GITDIR}/modules/tpm/ ~/.tmux/plugins/tpm
 
 echo "2. Link all common configs"
 # git
+lnf -f ${GITDIR}/configs/git/gitignore ~/.gitignore
 lnf -f ${GITDIR}/configs/git/gitconfig ~/.gitconfig
 
 # shell
