@@ -11,5 +11,6 @@ export PIPDIR=$(pip3 show powerline-status | perl -nwl -e 'if (m/Location: (.*)/
 
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
+[ -f ${HOME}/.proxy.sh ] && source ${HOME}/.proxy.sh
 [ -f ${SCRIPTS}/functions.sh ] && source ${SCRIPTS}/functions.sh
 [ -f ${SCRIPTS}/aliases.sh  ] && source ${SCRIPTS}/aliases.sh
