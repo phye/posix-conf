@@ -9,7 +9,7 @@ function set_core_util_alias() {
         alias lnd="ln -sTb"
         alias lnf="ln -sb"
         alias ls="ls --color"
-        alias grep="grep -I"
+        alias grep="grep -I -i"
     fi
     alias ll="ls -al"
     alias grep="grep -I"
