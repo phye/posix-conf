@@ -13,3 +13,6 @@
 [submodule "modules/gitignore"]
 	path = modules/gitignore
 	url = https://github.com/github/gitignore.git
+[submodule "modules/rime.conf"]
+	path = modules/rime.conf
+	url = https://github.com/phye/rime.conf.git
