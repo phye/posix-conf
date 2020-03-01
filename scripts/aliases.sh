@@ -42,6 +42,7 @@ function set_emacs_alias() {
     alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
     alias ed='emacs --daemon=$(tmux_get_session_name)'
     alias ec='emacsclient -nw --socket=$(tmux_get_session_name)'
+    alias ecf='ec $(fzf)'
     # }}}
 }
 
