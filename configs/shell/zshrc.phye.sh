@@ -18,5 +18,6 @@ bindkey "^X^E" edit-command-line
 hash -d notes=~/ws/OrgNotes
 hash -d gows=/ws/go/src/github.com/phye
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
+[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
