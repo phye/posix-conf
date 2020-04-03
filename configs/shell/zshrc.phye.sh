@@ -17,6 +17,7 @@ bindkey "^X^E" edit-command-line
 
 hash -d notes=~/ws/OrgNotes
 hash -d gows=/ws/go/src/github.com/phye
+hash -d ebooks=~/Documents/OneDrive/Ebooks
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
