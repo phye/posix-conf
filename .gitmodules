@@ -16,3 +16,6 @@
 [submodule "modules/rime.conf"]
 	path = modules/rime.conf
 	url = https://github.com/phye/rime.conf.git
+[submodule "modules/i3"]
+	path = modules/i3
+	url = https://github.com/phye/i3-config.git
