@@ -22,3 +22,4 @@ hash -d ebooks=~/Documents/OneDrive/Ebooks
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
+[ -f ${HOME}/.fzf.zsh ] && source ${HOME}/.fzf.zsh
