@@ -11,3 +11,5 @@
 	discardall = !git status | egrep '(modified|deleted)' | cut -d : -f 2| xargs git discard
 [credential]
 	helper = cache
+[diff]
+	submodule = log
