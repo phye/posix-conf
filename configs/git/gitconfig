@@ -13,3 +13,10 @@
 	helper = cache
 [diff]
 	submodule = log
+[url "https://github.com/"]
+    insteadOf = "git@github.com:"
+
+[url "git@git.code.oa.com:"]
+    insteadOf = https://git.code.oa.com/
+[url "git@git.code.oa.com:"]
+    insteadOf = http://git.code.oa.com/
