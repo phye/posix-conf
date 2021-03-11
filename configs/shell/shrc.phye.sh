@@ -9,7 +9,7 @@ export PATH=$PATH:$GOPATH/bin
 export PIPDIR=$(pip3 show powerline-status | perl -nwl -e 'if (m/Location: (.*)/) {print $1}')
 # }}}
 export LD_LIBRARY_PATH=/usr/local/lib
-export MANPATH=/usr/local/share/man
+export MANPATH=":/usr/local/share/man"
 
 PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
 
