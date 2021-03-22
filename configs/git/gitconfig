@@ -14,7 +14,7 @@
 	default = simple
 [alias]
 	discard = "checkout --"
-	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset%n' --abbrev-commit --date=relative --branches
+	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%n' --abbrev-commit
 	discardall = !git status | egrep '(modified|deleted)' | cut -d : -f 2| xargs git discard
 [credential]
 	helper = cache
@@ -23,3 +23,5 @@
 [submodule]
 	recurse = true
 
+[merge]
+	conflictStyle = diff3
