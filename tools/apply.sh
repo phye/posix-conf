@@ -30,6 +30,7 @@ lnf -f ${GITDIR}/configs/git/gitignore ~/.gitignore
 lnf -f ${GITDIR}/configs/git/gitconfig ~/.gitconfig
 
 # shell
+lnf -f ${GITDIR}/configs/shell/env.phye.sh ~/.env.phye.sh
 lnf -f ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
 lnf -f ${GITDIR}/configs/shell/bashrc.phye.sh ~/.bashrc.phye.sh
@@ -45,8 +46,22 @@ echo "3. Patching existing configs"
 if grep -q "bashrc.phye.sh" ${HOME}/.bashrc; then
     echo "Already patched bashrc, continue"
 else
-    echo -e "\n[ -f .bashrc.phye.sh ] && source .bashrc.phye.sh" >> ${HOME}/.bashrc
+    echo "[ -f ${HOME}/.bashrc.phye.sh ] && source ${HOME}.bashrc.phye.sh" >> ${HOME}/.bashrc
 fi
+
+if grep -q "env.phye.sh" ${HOME}/.bash_profile; then
+    echo "Already patched bash_profile, continue"
+else
+    echo "[ -f ${HOME}/.env.phye.sh ] && source ${HOME}/.env.phye.sh" >> ${HOME}/.bash_profile
+fi
+
+if grep -q "env.phye.sh" ${HOME}/.zshenv; then
+    echo "Already patched zshenv, continue"
+else
+    echo "[ -f ${HOME}/.env.phye.sh ] && source ${HOME}/.env.phye.sh" >> ${HOME}/.zshenv
+fi
+
+
 #if [[ $(ls -al) -ne 0 ]]; then
 #    echo "hi"
 #fi

@@ -13,7 +13,7 @@ function set_core_util_alias() {
     fi
     alias ll="ls -al"
     alias grep="grep -I"
-    alias cmake='cmake3'
+    #alias cmake='cmake3'
     alias dh='dirs -v'
     # }}}
 }
