@@ -1,6 +1,6 @@
 # ENVs {{{
 export SCRIPTS=${HOME}/bin/scripts
-export PATH="$HOME/bin/scripts:$HOME/bin:$PATH"
+export PATH="$HOME/bin/scripts:$HOME/bin:/snap/bin:$PATH"
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
