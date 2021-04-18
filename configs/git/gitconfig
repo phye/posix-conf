@@ -10,8 +10,12 @@
 	email = phye@tencent.com
 [core]
 	editor = vim
+[pull]
+	ff = only
 [push]
 	default = simple
+[merge]
+	conflictStyle = diff3
 [alias]
 	discard = "checkout --"
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%n' --abbrev-commit
@@ -20,10 +24,11 @@
 	helper = cache
 [diff]
 	submodule = log
-[submodule]
-	recurse = true
+#[submodule]
+#	recurse = true
 
-[merge]
-	conflictStyle = diff3
-[pull]
-	ff = only
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
