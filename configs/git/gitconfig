@@ -10,6 +10,11 @@
 	email = phye@tencent.com
 [core]
 	editor = vim
+	quotePath = false
+[diff]
+	submodule = log
+[merge]
+	conflictStyle = diff3
 [pull]
 	ff = only
 [push]
@@ -22,13 +27,14 @@
 	discardall = !git status | egrep '(modified|deleted)' | cut -d : -f 2| xargs git discard
 [credential]
 	helper = cache
-[diff]
-	submodule = log
-#[submodule]
-#	recurse = true
-
+[submodule]
+	recurse = true
 [filter "lfs"]
 	required = true
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
+[http "https://git.code.oa.com"]
+      proxy = http://127.0.0.1:12639
+[http "http://git.code.oa.com"]
+      proxy = http://127.0.0.1:12639
