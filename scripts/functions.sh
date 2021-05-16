@@ -39,4 +39,10 @@ function tmux_find_path() {
     result=$(tmux list-panes -a -F 'S: #S, W: #I, P: #P #{pane_current_path}' | grep "$1")
     echo $result
 }
+
+function unset_proxy() {
+    unset http_proxy
+    unset https_proxy
+    unset no_proxy
+}
 # }}}
