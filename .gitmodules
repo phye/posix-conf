@@ -19,3 +19,6 @@
 [submodule "modules/i3"]
 	path = modules/i3
 	url = https://github.com/phye/i3-config.git
+[submodule "modules/fzf"]
+	path = modules/fzf
+	url = https://github.com/junegunn/fzf.git
