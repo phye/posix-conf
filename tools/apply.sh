@@ -24,6 +24,9 @@ lnd -f ${GITDIR}/modules/oh-my-zsh/ ~/.oh-my-zsh
 # tpm
 lnd -f ${GITDIR}/modules/tpm/ ~/.tmux/plugins/tpm
 
+# fzf
+lnd -f ${GITDIR}/modules/fzf ~/.fzf
+
 echo "2. Link all common configs"
 # git
 lnf -f ${GITDIR}/configs/git/gitignore ~/.gitignore
@@ -46,7 +49,7 @@ echo "3. Patching existing configs"
 if grep -q "bashrc.phye.sh" ${HOME}/.bashrc; then
     echo "Already patched bashrc, continue"
 else
-    echo "[ -f ${HOME}/.bashrc.phye.sh ] && source ${HOME}.bashrc.phye.sh" >> ${HOME}/.bashrc
+    echo "[ -f ${HOME}/.bashrc.phye.sh ] && source ${HOME}/.bashrc.phye.sh" >> ${HOME}/.bashrc
 fi
 
 if grep -q "env.phye.sh" ${HOME}/.bash_profile; then
