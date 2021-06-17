@@ -18,6 +18,13 @@ bindkey "^X^E" edit-command-line
 hash -d notes=~/ws/OrgNotes
 hash -d gows=/ws/go/src/github.com/phye
 hash -d ebooks=~/Documents/OneDrive/Ebooks
+hash -d ytmedia=~/ws/yt-media-ai-videounderstanding
+hash -d ytpublic=~/ws/yt-public-cloud
+hash -d ytbiz=~/ws/yt-industry-ai
+hash -d proto=~/ws/yt-industry-ai/proto
+hash -d common=~/ws/yt-industry-ai/yt-server-common
+hash -d github=~/ws/github
+hash -d emacs=~/.emacs.d
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
