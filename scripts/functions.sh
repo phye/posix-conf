@@ -45,4 +45,17 @@ function unset_proxy() {
     unset https_proxy
     unset no_proxy
 }
+
+function edit() {
+    if [ -z "$1" ]
+    then
+        TMP="$(mktemp /tmp/stdin-XXX)"
+        cat >$TMP
+        emacsclient -a emacs $TMP
+        rm $TMP
+    else
+        emacsclient -a emacs "$@"
+    fi
+}
+
 # }}}
