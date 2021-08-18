@@ -18,9 +18,10 @@ bindkey "^X^E" edit-command-line
 hash -d notes=~/ws/OrgNotes
 hash -d gows=/ws/go/src/github.com/phye
 hash -d ebooks=~/Documents/OneDrive/Ebooks
-hash -d ytmedia=~/ws/yt-media-ai-videounderstanding
-hash -d ytpublic=~/ws/yt-public-cloud
-hash -d ytbiz=~/ws/yt-industry-ai
+hash -d media=~/ws/yt-media-ai-videounderstanding
+hash -d public=~/ws/yt-public-cloud
+hash -d biz=~/ws/yt-industry-ai
+hash -d timatix=~/ws/timatrix
 hash -d proto=~/ws/yt-industry-ai/proto
 hash -d common=~/ws/yt-industry-ai/yt-server-common
 hash -d github=~/ws/github
