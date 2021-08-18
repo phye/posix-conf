@@ -40,10 +40,10 @@ function set_curl_alias() {
 function set_emacs_alias() {
     # Emacs Utils {{{
     alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
-    #alias ed='emacs --daemon=$(tmux_get_session_name)'
-    alias ed='emacs --daemon'
-    #alias ec='emacsclient -nw --socket=$(tmux_get_session_name)'
-    alias ec='emacsclient -nw'
+    alias ed='emacs --daemon=$(tmux_get_session_name)'
+    #alias ed='emacs --daemon'
+    alias ec='emacsclient -nw --socket=$(tmux_get_session_name)'
+    #alias ec='emacsclient -nw'
     alias ecf='ec $(fzf)'
     # }}}
 }
