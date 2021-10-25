@@ -56,6 +56,7 @@ plugins=(git git-flow gitfast tmux virtualenv emacs golang man)
 # export PATH="/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+export DISABLE_AUTO_UPDATE="true"
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
