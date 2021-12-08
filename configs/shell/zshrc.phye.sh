@@ -16,7 +16,7 @@ zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
 hash -d notes=~/ws/gtd
-hash -d gows=/ws/go/src/github.com/phye
+hash -d gows=~/ws/go/src/github.com/phye
 hash -d ebooks=~/Documents/OneDrive/Ebooks
 hash -d media=~/ws/yt-media-ai-videounderstanding
 hash -d public=~/ws/yt-public-cloud
