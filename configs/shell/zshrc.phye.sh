@@ -26,6 +26,7 @@ hash -d proto=~/ws/yt-industry-ai/proto
 hash -d common=~/ws/yt-industry-ai/yt-server-common
 hash -d github=~/ws/github
 hash -d emacs=~/.emacs.d
+hash -d ssd=/Volumes/phye-ssd
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
