@@ -13,7 +13,6 @@ export PIPDIR=`pip3 show powerline-status | perl -nwl -e 'if (m/Location: (.*)/)
 #export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 #export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
 
-
 # hidpi support
 # qt 5
 export QT_AUTO_SCREEN_SCALE_FACTOR=1

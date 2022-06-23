@@ -48,6 +48,15 @@ function set_emacs_alias() {
     # }}}
 }
 
+function ediff() {
+	if [ "X${2}" = "X" ]; then
+		echo "USAGE: ediff <FILE 1> <FILE 2>"
+	else
+		# The --eval flag takes lisp code and evaluates it with EMACS
+		emacsclient -nw --socket=$(tmux_get_session_name) --eval "(ediff-files \"$1\" \"$2\")"
+	fi
+}
+
 function set_git_alias() {
     # Git Alias {{{
     alias gs='git status'
