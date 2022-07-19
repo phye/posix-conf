@@ -46,7 +46,7 @@
 	textconv = gpg --no-tty --decrypt
 
 [difftool "ediff"]
-	cmd = /data/home/phye/bin/scripts/ediff.sh $LOCAL $REMOTE $MERGED
+	cmd = ~/bin/scripts/ediff.sh $LOCAL $REMOTE $MERGED
 [diff]
 	tool = ediff
 [merge]
