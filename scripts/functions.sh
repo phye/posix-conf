@@ -58,4 +58,12 @@ function edit() {
     fi
 }
 
+function get_zsh_path() {
+    ret="/usr/bin/zsh"
+    if [ -f "/usr/local/bin/zsh" ]; then
+        ret="/usr/local/bin/zsh"
+    fi
+    echo $ret
+}
+
 # }}}
