@@ -31,6 +31,13 @@ hash -d emacs=~/.emacs.d
 hash -d ssd=/Volumes/phye-ssd
 hash -d onedrive=~/Documents/OneDrive
 hash -d legacy=~/ws/legacy
+hash -d qd=~/ws/qidian
+hash -d qdcc=~/ws/qidian/qd_cc_proj
+hash -d qdtx=~/ws/qidian/tx_plus_proj
+hash -d qdcfg=~/ws/qidian/qd_cc_config_proj
+hash -d qdpb=~/ws/qidian/global_pb
+hash -d qdpb1=~/ws/qidian/ivy-proto
+hash -d qdinf=~/ws/qidian/interface
 
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
