@@ -9,6 +9,8 @@ export LD_LIBRARY_PATH="/usr/local/lib:"
 export MANPATH=":/usr/local/share/man"
 export PIPDIR=`pip3 show powerline-status | perl -nwl -e 'if (m/Location: (.*)/) {print $1}'`
 export LESS="-R"
+export JAVA_HOME=`/usr/libexec/java_home -v 1.8`
+export INFOPATH="/opt/homebrew/share/info"
 #export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
 #export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
 #export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
@@ -26,8 +28,15 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 export HOMEBREW_GITHUB_API_TOKEN=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
 function get_zsh_path() {
     ret="/usr/bin/zsh"
+    if [ -f "/opt/homebrew/bin/zsh" ]; then
+        ret="/opt/homebrew/bin/zsh"
+        echo $ret
+        return
+    fi
     if [ -f "/usr/local/bin/zsh" ]; then
         ret="/usr/local/bin/zsh"
+        echo $ret
+        return
     fi
     echo $ret
 }
