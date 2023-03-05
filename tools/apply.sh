@@ -38,6 +38,7 @@ lnf -f ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
 lnf -f ${GITDIR}/configs/shell/bashrc.phye.sh ~/.bashrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
+lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.sh ~/.zshrc
 lnf -f ${GITDIR}/configs/shell/proxy.sh ~/.proxy.sh
 
