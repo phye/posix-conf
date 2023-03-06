@@ -3955,3 +3955,5 @@ unfunction grml_status_feature
 # Local variables:
 # mode: sh
 # End:
+
+[ -f ~/.zshrc.phye.sh ] && source ~/.zshrc.phye.sh
