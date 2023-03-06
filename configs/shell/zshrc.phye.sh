@@ -43,4 +43,3 @@ hash -d qdinf=~/ws/qidian/interface
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
 [ -f ${HOME}/.fzf.zsh ] && source ${HOME}/.fzf.zsh
-[ -f ~/.zshrc.grml.sh ] && source ~/.zshrc.grml.sh
