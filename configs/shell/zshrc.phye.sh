@@ -30,6 +30,7 @@ hash -d qdpb=~/ws/qidian/global_pb
 hash -d qdpb1=~/ws/qidian/ivy-proto
 hash -d qdinf=~/ws/qidian/interface
 
+[ -f ~/.git-completion.zsh ] && source ~/.git-completion.zsh
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
