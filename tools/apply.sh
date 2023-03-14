@@ -42,10 +42,12 @@ lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc.omz.sh
 lnf -f ${GITDIR}/configs/shell/proxy.sh ~/.proxy.sh
-if [ "$1" == "" ]; then
+if [ "$1" == "omz" ]; then
     lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc
-else
+elif [ "$1" == "grml" ]; then
     lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc
+else
+    echo "remember to set zshrc by yourself"
 fi
 
 
