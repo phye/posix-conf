@@ -50,3 +50,5 @@
 [mergetool "ediff"]
     cmd = ~/bin/scripts/ediff.sh $LOCAL $REMOTE $MERGED $BASE
     trustExitCode = true
+[init]
+	defaultBranch = master
