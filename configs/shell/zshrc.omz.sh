@@ -49,7 +49,8 @@ ZSH_THEME="phye"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-flow gitfast tmux virtualenv emacs golang man)
+plugins=(git git-lfs gitfast tmux systemd brew common-aliases)
+# plugins=(kubectl docker)
 
 # User configuration
 
