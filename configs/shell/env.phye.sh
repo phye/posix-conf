@@ -25,7 +25,6 @@ export QT_AUTO_SCREEN_SCALE_FACTOR=1
 
 # disable path unify
 # PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
-export HOMEBREW_GITHUB_API_TOKEN=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
 function get_zsh_path() {
     ret="/usr/bin/zsh"
     if [ -f "/opt/homebrew/bin/zsh" ]; then
