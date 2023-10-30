@@ -37,5 +37,5 @@ hash -d trpc=~/ws/git.code/trpc
 fpath=(~/ws/posix-conf/configs/shell/ $fpath)
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
 [ -f ${HOME}/.fzf.zsh ] && source ${HOME}/.fzf.zsh
+[ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh

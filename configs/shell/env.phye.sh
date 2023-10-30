@@ -8,13 +8,8 @@ export PATH="$HOME/bin/scripts:/opt/homebrew/bin:$HOME/bin:$GOPATH/bin:$HOME/.ca
 export LD_LIBRARY_PATH="/usr/local/lib"
 export LD_LIBRARY_PATH="/usr/local/lib:/opt/rh/devtoolset-9/root/usr/lib64/"
 export MANPATH=":/usr/local/share/man"
-export PIPDIR=`pip3 show powerline-status | perl -nwl -e 'if (m/Location: (.*)/) {print $1}'`
 export LESS="-R"
-#export JAVA_HOME=`/usr/libexec/java_home`
 export INFOPATH="/opt/homebrew/share/info:/usr/local/share/info${INFOPATH:+:${INFOPATH}}"
-#export GUILE_LOAD_PATH="/usr/local/share/guile/site/3.0"
-#export GUILE_LOAD_COMPILED_PATH="/usr/local/lib/guile/3.0/site-ccache"
-#export GUILE_SYSTEM_EXTENSIONS_PATH="/usr/local/lib/guile/3.0/extensions"
 
 # hidpi support
 # qt 5
@@ -40,5 +35,15 @@ function get_zsh_path() {
     fi
     echo $ret
 }
+
+function get_pip_path() {
+    kernel=$(uname -s)
+    if [ "${kernel}" = "Darwin" ]; then
+        echo "/opt/homebrew/lib/python3.11/site-packages"
+        return
+    fi
+    echo "/usr/lib/python3.11/site-packages"
+}
+export PIPDIR=`get_pip_path`
 export ZSH_PATH=`get_zsh_path`
 export FZF_PATH=`which fzf`
