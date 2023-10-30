@@ -63,6 +63,11 @@ function set_git_alias() {
     # }}}
 }
 
+function print_chinese() {
+    tmp=$(echo "$1" | sed 's/\\/\\0/g')
+    echo -e "$tmp"
+}
+
 function set_misc_alias() {
     :
 }
