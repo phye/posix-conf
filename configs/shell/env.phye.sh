@@ -37,8 +37,7 @@ function get_zsh_path() {
 }
 
 function get_pip_path() {
-    kernel=$(uname -s)
-    if [ "${kernel}" = "Darwin" ]; then
+    if [[ $OSTYPE == 'darwin'* ]]; then
         echo "/opt/homebrew/lib/python3.11/site-packages"
         return
     fi
