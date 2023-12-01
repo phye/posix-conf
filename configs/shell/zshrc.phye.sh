@@ -39,3 +39,5 @@ fpath=(~/ws/posix-conf/configs/shell/ $fpath)
 [ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
 [ -f ${HOME}/.fzf.zsh ] && source ${HOME}/.fzf.zsh
 [ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
+[ -f ~/.oh-my-zsh/plugins/git/git.plugin.zsh  ] && source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
+[ -f ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh ] && source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
