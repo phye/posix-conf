@@ -13,7 +13,6 @@ hash -d ebooks=~/Documents/OneDrive/Ebooks
 hash -d media=~/ws/yt-media-ai-videounderstanding
 hash -d public=~/ws/yt-public-cloud
 hash -d biz=~/ws/yt-industry-ai
-hash -d timatix=~/ws/timatrix
 hash -d proto=~/ws/yt-industry-ai/proto
 hash -d common=~/ws/yt-industry-ai/yt-server-common
 hash -d gocommon=~/ws/yt-industry-ai/yt-go-common
@@ -23,16 +22,9 @@ hash -d emacs=~/.emacs.d
 hash -d ssd=/Volumes/phye-ssd
 hash -d onedrive=~/Documents/OneDrive
 hash -d legacy=~/ws/legacy
-hash -d qd=~/ws/qidian
-hash -d qdcc=~/ws/qidian/qd_cc_proj
-hash -d qdtx=~/ws/qidian/tx_plus_proj
-hash -d qdcfg=~/ws/qidian/qd_cc_config_proj
-hash -d qdpb=~/ws/qidian/global_pb
-hash -d ivypb=~/ws/qidian/ivy-proto
-hash -d qdinf=~/ws/qidian/interface
-hash -d ivy=~/ws/qidian/ivy
-hash -d ivylib=~/ws/qidian/ivy/lib
 hash -d trpc=~/ws/git.code/trpc
+hash -d ticloud=~/ws/ti-cloud
+hash -d tiinfra=~/ws/ti-cloud/infra
 
 fpath=(~/ws/posix-conf/configs/shell/ $fpath)
 [ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
