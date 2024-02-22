@@ -67,6 +67,10 @@ function set_misc_alias() {
     :
 }
 
+function set_k8s_alias() {
+    alias kctx="kubectx"
+}
+
 function set_alias() {
     set_core_util_alias
     set_tmux_alias
@@ -74,6 +78,7 @@ function set_alias() {
     set_emacs_alias
     set_git_alias
     set_misc_alias
+    set_k8s_alias
 }
 
 set_alias
