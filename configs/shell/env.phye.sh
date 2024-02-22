@@ -46,3 +46,16 @@ function get_pip_path() {
 export PIPDIR=`get_pip_path`
 export ZSH_PATH=`get_zsh_path`
 export FZF_PATH=`which fzf`
+
+function setup_kubectl_config() {
+    KUBECONFIG=""
+    cfgdir=$1
+    if [ -z $cfgdir ]; then
+        cfgdir="$HOME/.config/kubectl"
+    fi
+    for f in $cfgdir/*; do
+        KUBECONFIG=$f:$KUBECONFIG
+    done
+    export KUBECONFIG
+}
+setup_kubectl_config

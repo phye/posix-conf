@@ -66,4 +66,9 @@ function get_zsh_path() {
     echo $ret
 }
 
+function print_chinese() {
+    tmp=$(echo "$1" | sed 's/\\/\\0/g')
+    echo -e "$tmp"
+}
+
 # }}}
