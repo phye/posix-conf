@@ -27,9 +27,23 @@ hash -d ticloud=~/ws/ti-cloud
 hash -d tiinfra=~/ws/ti-cloud/infra
 
 fpath=(~/ws/posix-conf/configs/shell/ $fpath)
-[ -f /usr/share/fzf/key-bindings.zsh ] && source /usr/share/fzf/key-bindings.zsh
-[ -f /usr/share/fzf/completion.zsh ] && source /usr/share/fzf/completion.zsh
-[ -f ${HOME}/.fzf.zsh ] && source ${HOME}/.fzf.zsh
-[ -f ~/.shrc.phye.sh ] && source ~/.shrc.phye.sh
-[ -f ~/.oh-my-zsh/plugins/git/git.plugin.zsh  ] && source ~/.oh-my-zsh/plugins/git/git.plugin.zsh
-[ -f ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh ] && source ~/.oh-my-zsh/plugins/tmux/tmux.plugin.zsh
+
+function load_if_exist () {
+    [ -f $1 ] && source $1
+}
+
+function load_omz_plugin() {
+    f=~/.oh-my-zsh/plugins/$1/$1.plugin.zsh
+    load_if_exist $f
+}
+
+load_if_exist /usr/share/fzf/key-bindings.zsh
+load_if_exist /usr/share/fzf/completion.zsh
+load_if_exist ${HOME}/.fzf.zsh
+load_if_exist ~/.shrc.phye.sh
+
+if [ ! -z "$IS_GRML" ]; then
+    load_omz_plugin git
+    load_omz_plugin tmux
+    load_omz_plugin kubectl
+fi
