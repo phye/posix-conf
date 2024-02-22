@@ -71,4 +71,6 @@ function print_chinese() {
     echo -e "$tmp"
 }
 
+source emacs.read.stdin.sh
+
 # }}}
