@@ -53,6 +53,9 @@ function setup_kubectl_config() {
     if [ -z $cfgdir ]; then
         cfgdir="$HOME/.kube/configs"
     fi
+    if [ ! -e $cfgdir ]; then
+        return
+    fi
     for f in $cfgdir/*.yaml; do
         KUBECONFIG=$f:$KUBECONFIG
     done
