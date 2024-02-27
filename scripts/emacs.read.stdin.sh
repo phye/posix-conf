@@ -27,7 +27,7 @@ e()
     fi
 }
 
-eyaml()
+y()
 {
     # If the argument is - then write stdin to a tempfile and open the
     # tempfile.
@@ -45,7 +45,7 @@ eyaml()
     fi
 }
 
-ejson()
+j()
 {
     # If the argument is - then write stdin to a tempfile and open the
     # tempfile.
