@@ -41,6 +41,7 @@ if [ ! -z "$IS_GRML" ]; then
 
     load_omz_plugin fzf
     load_omz_plugin gitfast
+    load_omz_plugin git
     load_omz_plugin kubectl
     load_omz_plugin tmux
 fi
