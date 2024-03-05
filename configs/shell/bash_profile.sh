@@ -1,0 +1,1 @@
+[ -f /data/home/phye/.env.phye.sh ] && source /data/home/phye/.env.phye.sh
