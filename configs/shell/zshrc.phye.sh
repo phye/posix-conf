@@ -1,10 +1,10 @@
 HISTFILE=~/.histfile
-HISTSIZE=5000
-SAVEHIST=5000
+HISTSIZE=500000
+SAVEHIST=500000
 
-autoload edit-command-line
-zle -N edit-command-line
-bindkey "^X^E" edit-command-line
+#autoload edit-command-line
+#zle -N edit-command-line
+#bindkey "^X^E" edit-command-line
 
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
@@ -25,25 +25,24 @@ hash -d legacy=~/ws/legacy
 hash -d trpc=~/ws/git.code/trpc
 hash -d ticloud=~/ws/ti-cloud
 hash -d tiinfra=~/ws/ti-cloud/infra
+hash -d k8stotal=~/ws/github/k8s.total
 
-fpath=(~/ws/posix-conf/configs/shell/ $fpath)
+#fpath=(~/ws/posix-conf/configs/shell/ $fpath)
 
 function load_if_exist () {
     [ -f $1 ] && source $1
 }
 
-function load_omz_plugin() {
-    f=~/.oh-my-zsh/plugins/$1/$1.plugin.zsh
-    load_if_exist $f
-}
-
-load_if_exist /usr/share/fzf/key-bindings.zsh
-load_if_exist /usr/share/fzf/completion.zsh
-load_if_exist ${HOME}/.fzf.zsh
-load_if_exist ~/.shrc.phye.sh
-
 if [ ! -z "$IS_GRML" ]; then
-    load_omz_plugin git
-    load_omz_plugin tmux
+    function load_omz_plugin() {
+        f=${HOME}/.oh-my-zsh/plugins/$1/$1.plugin.zsh
+        load_if_exist $f
+    }
+
+    load_omz_plugin fzf
+    load_omz_plugin gitfast
     load_omz_plugin kubectl
+    load_omz_plugin tmux
 fi
+
+load_if_exist ${HOME}/.shrc.phye.sh
