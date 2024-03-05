@@ -35,14 +35,6 @@ function get_zsh_path() {
     echo $ret
 }
 
-function get_pip_path() {
-    if [[ $OSTYPE == 'darwin'* ]]; then
-        echo "/opt/homebrew/lib/python3.11/site-packages"
-        return
-    fi
-    echo "/usr/lib/python3.11/site-packages"
-}
-export PIPDIR=`get_pip_path`
 export ZSH_PATH=`get_zsh_path`
 export FZF_PATH=`which fzf`
 
