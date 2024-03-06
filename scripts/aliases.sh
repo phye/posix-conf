@@ -20,8 +20,8 @@ function set_core_util_alias() {
 
 function set_tmux_alias() {
     # Tmux Alias {{{
-    alias tmuxn="tmux -2 new-session -s"
-    alias tmuxa="tmux -2 attach-session -t"
+    alias tn="tmux -2 new-session -s"
+    alias ta="tmux -2 attach-session -t"
     alias tfp="tmux_find_pts"
     alias tfc="tmux_find_command"
     alias tfph="tmux_find_path"
