@@ -73,4 +73,16 @@ function print_chinese() {
 
 source emacs.read.stdin.sh
 
+function kjj () {
+    kubectl get "$@" -o json | j -
+}
+
+function kyy () {
+    kubectl get "$@" -o yaml | y -
+}
+
+function kdy () {
+    kubectl describe "$@" | y -
+}
+
 # }}}
