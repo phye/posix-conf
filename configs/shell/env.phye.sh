@@ -2,6 +2,7 @@
 export SCRIPTS=${HOME}/bin/scripts
 export EDITOR='vim'
 export LC_ALL=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
 export GOPATH=~/ws/go
 export PATH="$HOME/bin/scripts:$HOME/bin:$HOME/.fzf/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:/usr/local/go/bin:/usr/local/bin:/opt/homebrew/bin:/snap/bin:/usr/local/opt/fzf/bin:/usr/local/opt/llvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin"
@@ -40,7 +41,7 @@ function get_pip_path() {
         echo "/opt/homebrew/lib/python3.11/site-packages"
         return
     fi
-    echo "/usr/lib/python3.11/site-packages"
+    echo "/usr/local/lib/python3.6/site-packages"
 }
 export PIPDIR=`get_pip_path`
 export ZSH_PATH=`get_zsh_path`
