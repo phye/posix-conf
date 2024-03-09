@@ -38,7 +38,7 @@ lnf -f ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
 lnf -f ${GITDIR}/configs/shell/git-completion.zsh ~/.git-completion.zsh
 lnf -f ${GITDIR}/configs/shell/bashrc.phye.sh ~/.bashrc.phye.sh
-lnf -f ${GITDIR}/configs/shell/bash_profile ~/.bash_profile
+lnf -f ${GITDIR}/configs/shell/bash_profile.sh ~/.bash_profile
 lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc.omz.sh
