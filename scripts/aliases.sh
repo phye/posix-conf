@@ -71,9 +71,10 @@ function set_k8s_alias() {
     alias kctx="kubectx"
     alias kd="kubectl describe"
     alias kg="kubectl get"
-    alias kgow="kubectl get -o wide"
-    alias kgoy="kubectl get -o yaml"
-    alias kgoj="kubectl get -o json"
+    alias kga="kubectl get -A"
+    alias kgw="kubectl get -o wide"
+    alias kgy="kubectl get -o yaml"
+    alias kgj="kubectl get -o json"
 }
 
 function set_alias() {
