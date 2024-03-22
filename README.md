@@ -50,3 +50,12 @@ Set `gtk-key-theme-name` to `Emacs` in ~/.config/gtk-3.0/settings.ini, and resta
 
     [Settings]
     gtk-key-theme-name = Emacs
+
+# Prerequisite
+
+## [nerd font](https://github.com/ryanoasis/nerd-fonts?tab=readme-ov-file#option-2-homebrew-fonts) (for tmux-power)
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+```
+Then, in iterm tab, choose 'Hack Nerd Font Propo'
