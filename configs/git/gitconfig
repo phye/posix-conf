@@ -7,9 +7,9 @@
 
 [user]
 	name = Philip Ye
-	email = phye.pro@gmail.com
+	email = phye@tencent.com
 [core]
-	editor = vim
+	editor = emacsclient -nw -a ''
 	quotePath = false
 [diff]
 	submodule = log
