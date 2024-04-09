@@ -1,6 +1,6 @@
 # ENVs {{{
 export SCRIPTS=${HOME}/bin/scripts
-export EDITOR='emacsclient -nw'
+export EDITOR='emacsclient -nw -a'
 export LC_ALL=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -54,3 +54,5 @@ function setup_kubectl_config() {
     export KUBECONFIG
 }
 setup_kubectl_config
+
+[ -f "$HOME/.cargo/env" ] && source "$HOME/.cargo/env"
