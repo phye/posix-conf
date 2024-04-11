@@ -2,9 +2,9 @@ HISTFILE=~/.histfile
 HISTSIZE=500000
 SAVEHIST=500000
 
-#autoload edit-command-line
-#zle -N edit-command-line
-#bindkey "^X^E" edit-command-line
+autoload edit-command-line
+zle -N edit-command-line
+bindkey "^X^E" edit-command-line
 
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
