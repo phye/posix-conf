@@ -25,6 +25,8 @@ function set_tmux_alias() {
     alias tfp="tmux_find_pts"
     alias tfc="tmux_find_command"
     alias tfph="tmux_find_path"
+    alias s3="tmux split-window -h -l 66% \; split-window -h -l 50%"
+    alias s4="tmux split-window -h \; split-window -v \; split-window -v -t {left-of} \; select-pane -t {top-left}"
     # }}}
 }
 
@@ -71,6 +73,7 @@ function set_k8s_alias() {
     alias kctx="kubectx"
     alias kd="kubectl describe"
     alias kg="kubectl get"
+    alias ke="kubectl edit"
     alias kga="kubectl get -A"
     alias kgw="kubectl get -o wide"
     alias kgy="kubectl get -o yaml"
