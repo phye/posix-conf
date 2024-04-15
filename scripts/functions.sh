@@ -85,4 +85,8 @@ function kdy () {
     kubectl describe "$@" | y -
 }
 
+function kexec () {
+    kubectl exec -n kube-system "$@" -it bash
+}
+
 # }}}

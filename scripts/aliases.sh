@@ -74,6 +74,8 @@ function set_k8s_alias() {
     alias kd="kubectl describe"
     alias kg="kubectl get"
     alias ke="kubectl edit"
+    alias kx="kubectl exec -it bash"
+    alias kl="kubectl logs"
 
     alias kga="kubectl get -A"
     alias kgw="kubectl get -o wide"
@@ -83,6 +85,8 @@ function set_k8s_alias() {
     alias kkd="kd -n kube-system"
     alias kkg="kg -n kube-system"
     alias kke="ke -n kube-system"
+    alias kkx="kx -n kube-system"
+    alias kkl="kl -n kube-system"
 
     alias kkgy="kgy -n kube-system"
     alias kkgw="kgw -n kube-system"
