@@ -8,6 +8,7 @@ mkdir -p ${HOME}
 mkdir -p ${HOME}/bin
 mkdir -p ${HOME}/.tmux/plugins/
 
+source ${GITDIR}/scripts/functions.sh
 source ${GITDIR}/scripts/aliases.sh
 
 echo "1. Configure all submodules"
