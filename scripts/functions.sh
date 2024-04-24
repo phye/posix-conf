@@ -58,14 +58,6 @@ function edit() {
     fi
 }
 
-function get_zsh_path() {
-    ret="/usr/bin/zsh"
-    if [ -f "/usr/local/bin/zsh" ]; then
-        ret="/usr/local/bin/zsh"
-    fi
-    echo $ret
-}
-
 function print_chinese() {
     tmp=$(echo "$1" | sed 's/\\/\\0/g')
     echo -e "$tmp"
@@ -88,5 +80,22 @@ function kdy () {
 function kexec () {
     kubectl exec -n kube-system "$@" -it bash
 }
+
+function setup_kubectl_config() {
+    KUBECONFIG=""
+    cfgdir=$1
+    if [ -z $cfgdir ]; then
+        cfgdir="$HOME/.kube/configs"
+    fi
+    if [ ! -e $cfgdir ]; then
+        return
+    fi
+    for f in $cfgdir/*.yaml; do
+        KUBECONFIG=$f:$KUBECONFIG
+    done
+    export KUBECONFIG
+}
+
+setup_kubectl_config
 
 # }}}

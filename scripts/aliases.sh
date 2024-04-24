@@ -74,7 +74,7 @@ function set_k8s_alias() {
     alias kd="kubectl describe"
     alias kg="kubectl get"
     alias ke="kubectl edit"
-    alias kx="kubectl exec -it bash"
+    alias kx="kubectl exec"
     alias kl="kubectl logs"
 
     alias kga="kubectl get -A"

@@ -44,7 +44,7 @@ lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc.omz.sh
 lnf -f ${GITDIR}/configs/shell/zsh.env.sh ~/.zshenv
 lnf -f ${GITDIR}/configs/shell/zshrc.archive.sh ~/.zshrc.archive.sh
-lnf -f ${GITDIR}/configs/shell/proxy.sh ~/.proxy.sh
+lnf -f ${GITDIR}/configs/shell/var.sh ~/.var.sh
 if [ "$1" == "omz" ]; then
     lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc
 elif [ "$1" == "grml" ]; then
