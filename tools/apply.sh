@@ -33,6 +33,7 @@ lnf -f ${GITDIR}/configs/git/gitignore ~/.gitignore
 lnf -f ${GITDIR}/configs/git/gitconfig ~/.gitconfig
 
 # shell
+lnf -f ${GITDIR}/configs/shell/var.sh ~/.var.sh
 lnf -f ${GITDIR}/configs/shell/env.phye.sh ~/.env.phye.sh
 lnf -f ${GITDIR}/configs/shell/shrc.phye.sh ~/.shrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/git-completion.bash ~/.git-completion.bash
@@ -43,9 +44,8 @@ lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc.omz.sh
 lnf -f ${GITDIR}/configs/shell/zsh.env.sh ~/.zshenv
-lnf -f ${GITDIR}/configs/shell/zsh.local.sh ~/.zsh.local
+lnf -f ${GITDIR}/configs/shell/zshrc.local.sh ~/.zshrc.local
 lnf -f ${GITDIR}/configs/shell/zshrc.archive.sh ~/.zshrc.archive.sh
-lnf -f ${GITDIR}/configs/shell/var.sh ~/.var.sh
 if [ "$1" == "omz" ]; then
     lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc
 elif [ "$1" == "grml" ]; then
