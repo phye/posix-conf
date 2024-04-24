@@ -43,6 +43,7 @@ lnf -f ${GITDIR}/configs/shell/zshrc.phye.sh ~/.zshrc.phye.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.grml.sh ~/.zshrc.grml.sh
 lnf -f ${GITDIR}/configs/shell/zshrc.omz.sh ~/.zshrc.omz.sh
 lnf -f ${GITDIR}/configs/shell/zsh.env.sh ~/.zshenv
+lnf -f ${GITDIR}/configs/shell/zsh.local.sh ~/.zsh.local
 lnf -f ${GITDIR}/configs/shell/zshrc.archive.sh ~/.zshrc.archive.sh
 lnf -f ${GITDIR}/configs/shell/var.sh ~/.var.sh
 if [ "$1" == "omz" ]; then
