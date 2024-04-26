@@ -1990,14 +1990,14 @@ typeset -A grml_vcs_coloured_formats
 typeset -A grml_vcs_plain_formats
 
 grml_vcs_plain_formats=(
-    format "(%s%)-[%b] "    "zsh: %r"
-    actionformat "(%s%)-[%b|%a] " "zsh: %r"
+    format "[%b] "    "zsh: %r"
+    actionformat "[%b|%a] " "zsh: %r"
     rev-branchformat "%b:%r"
 )
 
 grml_vcs_coloured_formats=(
-    format "${MAGENTA}(${NO_COLOR}%s${MAGENTA})${YELLOW}-${MAGENTA}[${GREEN}%b${MAGENTA}]${NO_COLOR} "
-    actionformat "${MAGENTA}(${NO_COLOR}%s${MAGENTA})${YELLOW}-${MAGENTA}[${GREEN}%b${YELLOW}|${RED}%a${MAGENTA}]${NO_COLOR} "
+    format "${MAGENTA}[${GREEN}%b${MAGENTA}]${NO_COLOR} "
+    actionformat "${MAGENTA}[${GREEN}%b${YELLOW}|${RED}%a${MAGENTA}]${NO_COLOR} "
     rev-branchformat "%b${RED}:${YELLOW}%r"
 )
 
