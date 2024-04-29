@@ -19,6 +19,7 @@ hash -d gocommon=~/ws/yt-industry-ai/yt-go-common
 hash -d gitwoa=~/ws/git.code
 hash -d github=~/ws/github
 hash -d emacs=~/.emacs.d
+hash -d emacsdata=~/.emacs.data.d
 hash -d ssd=/Volumes/phye-ssd
 hash -d onedrive=~/Documents/OneDrive
 hash -d legacy=~/ws/legacy
