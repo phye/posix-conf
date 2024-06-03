@@ -63,6 +63,10 @@ function print_chinese() {
     echo -e "$tmp"
 }
 
+function cdp() {
+  cd $(git rev-parse --git-dir)/..
+}
+
 # from: https://github.com/davidshepherd7/emacs-read-stdin/tree/master
 # include this file in your .bashrc/.zshrc with source "emacs-pipe.sh"
 

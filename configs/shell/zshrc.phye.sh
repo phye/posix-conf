@@ -45,6 +45,7 @@ if [ ! -z "$IS_GRML" ]; then
     load_omz_plugin git
     load_omz_plugin kubectl
     load_omz_plugin tmux
+    load_omz_plugin zoxide
 fi
 
 load_if_exist ${HOME}/.shrc.phye.sh

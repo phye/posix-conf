@@ -43,6 +43,7 @@ My personal CLI selections are:
   - vim
   - zsh(oh-my-zsh)
   - fzf
+  - zoxide
 
 # Hints
 ## Emacs like key bindings for google-chrome in plasma 5
