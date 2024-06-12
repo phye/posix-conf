@@ -6,6 +6,9 @@ autoload edit-command-line
 zle -N edit-command-line
 bindkey "^X^E" edit-command-line
 
+autoload -U select-word-style
+select-word-style bash
+
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
 hash -d gows=~/ws/go/src/github.com/phye
