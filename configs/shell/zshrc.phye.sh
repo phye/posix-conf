@@ -9,6 +9,15 @@ bindkey "^X^E" edit-command-line
 autoload -U select-word-style
 select-word-style bash
 
+globalias() {
+   zle _expand_alias
+   zle expand-word
+   zle self-insert
+}
+zle -N globalias
+bindkey -M emacs "\t" globalias
+bindkey -M viins "\t" globalias
+
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
 hash -d gows=~/ws/go/src/github.com/phye
