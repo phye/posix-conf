@@ -12,14 +12,11 @@ select-word-style bash
 globalias() {
    zle _expand_alias
    zle expand-word
-   zle self-insert
 }
 zle -N globalias
 
-bindkey -M emacs " " globalias
-bindkey -M viins " " globalias
-bindkey -M emacs "^ " magic-space
-bindkey -M viins "^ " magic-space
+bindkey -M emacs "^ " globalias
+bindkey -M viins "^ " globalias
 
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
