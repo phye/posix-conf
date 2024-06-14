@@ -1,23 +1,4 @@
-HISTFILE=~/.histfile
-HISTSIZE=500000
-SAVEHIST=500000
-
-autoload edit-command-line
-zle -N edit-command-line
-bindkey "^X^E" edit-command-line
-
-autoload -U select-word-style
-select-word-style bash
-
-globalias() {
-   zle _expand_alias
-   zle expand-word
-}
-zle -N globalias
-
-bindkey -M emacs "^ " globalias
-bindkey -M viins "^ " globalias
-
+# zsh dir alias
 hash -d conf=~/ws/posix-conf
 hash -d gtd=~/ws/gtd
 hash -d gows=~/ws/go/src/github.com/phye
@@ -36,11 +17,9 @@ hash -d ssd=/Volumes/phye-ssd
 hash -d onedrive=~/Documents/OneDrive
 hash -d legacy=~/ws/legacy
 hash -d trpc=~/ws/git.code/trpc
-hash -d ticloud=~/ws/ti-cloud
-hash -d tiinfra=~/ws/ti-cloud/infra
+hash -d ti=~/ws/ti-cloud
+hash -d infra=~/ws/ti-cloud/infra
 hash -d k8stotal=~/ws/github/k8s.total
-
-#fpath=(~/ws/posix-conf/configs/shell/ $fpath)
 
 function load_if_exist () {
     [ -f $1 ] && source $1
@@ -61,3 +40,5 @@ if [ ! -z "$IS_GRML" ]; then
 fi
 
 load_if_exist ${HOME}/.shrc.phye.sh
+load_if_exist ${MY_ZSH_DIR}/load.widgets.zsh
+load_if_exist ${MY_ZSH_DIR}/setopts.zsh
