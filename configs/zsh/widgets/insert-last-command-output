@@ -1,0 +1,7 @@
+emulate -L zsh
+
+zmodload -i zsh/parameter
+
+function insert-last-command-output() {
+  LBUFFER+="$(eval $history[$((HISTCMD-1))])"
+}

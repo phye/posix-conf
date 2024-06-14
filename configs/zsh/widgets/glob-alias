@@ -1,0 +1,6 @@
+emulate -L zsh
+
+function glob-alias() {
+   zle _expand_alias
+   zle expand-word
+}
