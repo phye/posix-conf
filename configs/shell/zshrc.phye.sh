@@ -42,3 +42,4 @@ fi
 load_if_exist ${HOME}/.shrc.phye.sh
 load_if_exist ${MY_ZSH_DIR}/load.widgets.zsh
 load_if_exist ${MY_ZSH_DIR}/setopts.zsh
+load_if_exist ${MY_ZSH_DIR}/alias.zsh
