@@ -173,3 +173,7 @@ function kexec () {
 # setup_kubectl_config
 
 # }}}
+
+function osc52() {
+    echo -en "\x1b]52;c;$(base64 -w0)\x07"
+}
