@@ -1,3 +1,4 @@
-alias -g T="-it bash"
-alias -g Y=" | y -"
-alias -g O=" | osc52"
+alias -g tt="-it bash"
+alias -g ee=" | edit -"
+alias -g yy=" | yaml -"
+alias -g oo=" | osc52"

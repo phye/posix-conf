@@ -68,7 +68,6 @@ function set_k8s_alias() {
     alias kx="kubectl exec"
     alias kl="kubectl logs"
 
-    alias kga="kubectl get -A"
     alias kgw="kubectl get -o wide"
     alias kgy="kubectl get -o yaml"
     alias kgj="kubectl get -o json"
@@ -78,9 +77,11 @@ function set_k8s_alias() {
     alias kke="ke -n kube-system"
     alias kkx="kx -n kube-system"
     alias kkl="kl -n kube-system"
+    alias kag="kg -A"
 
     alias kkgy="kgy -n kube-system"
     alias kkgw="kgw -n kube-system"
+    alias kagw="kag -o wide"
 
     # ti extensions
     alias l="kubectl provider clusters"

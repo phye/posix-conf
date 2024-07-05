@@ -46,18 +46,6 @@ function unset_proxy() {
     unset no_proxy
 }
 
-function edit() {
-    if [ -z "$1" ]
-    then
-        TMP="$(mktemp /tmp/stdin-XXX)"
-        cat >$TMP
-        emacsclient -a emacs $TMP
-        rm $TMP
-    else
-        emacsclient -a emacs "$@"
-    fi
-}
-
 function print_chinese() {
     tmp=$(echo "$1" | sed 's/\\/\\0/g')
     echo -e "$tmp"
@@ -79,7 +67,7 @@ function _emacsfun()
 
 
 # An emacs 'alias' with the ability to read from stdin
-function e() {
+function edit() {
     # If the argument is - then write stdin to a tempfile and open the
     # tempfile.
     if [ $# -ge 1 ] && [ "$1" = - ]; then
@@ -95,7 +83,7 @@ function e() {
     fi
 }
 
-function y() {
+function yaml() {
     # If the argument is - then write stdin to a tempfile and open the
     # tempfile.
     if [ $# -ge 1 ] && [ "$1" = - ]; then
@@ -112,7 +100,7 @@ function y() {
     fi
 }
 
-function j() {
+function json() {
     # If the argument is - then write stdin to a tempfile and open the
     # tempfile.
     if [ $# -ge 1 ] && [ "$1" = - ]; then
@@ -138,22 +126,6 @@ function ediff() {
 	fi
 }
 
-function kjj () {
-    kubectl get "$@" -o json | j -
-}
-
-function kyy () {
-    kubectl get "$@" -o yaml | y -
-}
-
-function kdy () {
-    kubectl describe "$@" | y -
-}
-
-function kexec () {
-    kubectl exec -n kube-system "$@" -it bash
-}
-
 # This is no longer needed
 # function setup_kubectl_config() {
 #     KUBECONFIG=""
@@ -175,5 +147,13 @@ function kexec () {
 # }}}
 
 function osc52() {
-    echo -en "\x1b]52;c;$(base64 -w0)\x07"
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        echo -en "\x1b]52;c;$(base64)\x07"
+    else
+        echo -en "\x1b]52;c;$(base64 -w0)\x07"
+    fi
+}
+
+function tipwd() {
+    kubectl -n kube-system get nodegroups.autoscaler.ti.org $1 -o jsonpath='{.metadata.uid}' | head -c 20
 }
