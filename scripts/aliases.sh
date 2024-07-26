@@ -84,7 +84,7 @@ function set_k8s_alias() {
     alias kagw="kag -o wide"
 
     # ti extensions
-    alias l="kubectl provider clusters"
+    alias kpc="kubectl provider clusters"
 }
 
 function set_alias() {
