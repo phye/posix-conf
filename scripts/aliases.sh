@@ -62,6 +62,8 @@ function set_misc_alias() {
 
 function set_k8s_alias() {
     alias kctx="kubectx"
+    alias testgz="kubectx ti-test-gz-100031385875"
+    alias testsh="kubectx ti-test-sh-100031385875"
     alias kd="kubectl describe"
     alias kg="kubectl get"
     alias ke="kubectl edit"
@@ -72,6 +74,7 @@ function set_k8s_alias() {
     alias kgy="kubectl get -o yaml"
     alias kgj="kubectl get -o json"
 
+    alias kk="k -n kube-system"
     alias kkd="kd -n kube-system"
     alias kkg="kg -n kube-system"
     alias kke="ke -n kube-system"
@@ -85,6 +88,7 @@ function set_k8s_alias() {
 
     # ti extensions
     alias kpc="kubectl provider clusters"
+    alias klg="kubectl login"
 }
 
 function set_alias() {
