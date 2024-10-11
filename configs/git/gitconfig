@@ -9,7 +9,7 @@
 	name = Philip Ye
 	email = phye@tencent.com
 [core]
-	editor = emacsclient -nw -a ''
+	editor = "emacsclient -nw --socket=$(tmux display-message -p \"#S\")"
 	quotePath = false
 [diff]
 	submodule = log
