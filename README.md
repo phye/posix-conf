@@ -44,6 +44,7 @@ My personal CLI selections are:
   - zsh(oh-my-zsh)
   - fzf
   - zoxide
+  - shfmt
 
 # Hints
 ## Emacs like key bindings for google-chrome in plasma 5
