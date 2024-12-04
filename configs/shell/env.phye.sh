@@ -15,6 +15,8 @@ export LD_LIBRARY_PATH="/usr/local/lib"
 export MANPATH=":/usr/local/share/man"
 export LESS="-R"
 export INFOPATH="/opt/homebrew/share/info:/usr/local/share/info${INFOPATH:+:${INFOPATH}}"
+# to make custom widgets loadable before compinit
+export fpath=(${MY_ZSH_DIR}/widgets $fpath)
 
 # hidpi support
 # qt 5
