@@ -61,34 +61,21 @@ function set_misc_alias() {
 }
 
 function set_k8s_alias() {
-    alias kctx="kubectx"
+    alias ctx="kubectx"
+    alias k="kubectl"
+    alias l='kubectl provider clusters'
+    alias s='kubectl context switch'
+
     alias testgz="kubectx ti-test-gz-100031385875"
     alias testsh="kubectx ti-test-sh-100031385875"
+
     alias kd="kubectl describe"
-    alias kg="kubectl get"
     alias ke="kubectl edit"
-    alias kx="kubectl exec"
     alias kl="kubectl logs"
+    alias ki="kubectl login"
 
     alias kgw="kubectl get -o wide"
-    alias kgy="kubectl get -o yaml"
-    alias kgj="kubectl get -o json"
-
-    alias kk="k -n kube-system"
-    alias kkd="kd -n kube-system"
-    alias kkg="kg -n kube-system"
-    alias kke="ke -n kube-system"
-    alias kkx="kx -n kube-system"
-    alias kkl="kl -n kube-system"
-    alias kag="kg -A"
-
-    alias kkgy="kgy -n kube-system"
-    alias kkgw="kgw -n kube-system"
-    alias kagw="kag -o wide"
-
-    # ti extensions
-    alias kpc="kubectl provider clusters"
-    alias klg="kubectl login"
+    alias kx="kubectl exec -i -t"
 }
 
 function set_alias() {

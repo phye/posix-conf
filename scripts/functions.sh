@@ -157,3 +157,7 @@ function osc52() {
 function tipwd() {
     kubectl -n kube-system get nodegroups.autoscaler.ti.org $1 -o jsonpath='{.metadata.uid}' | head -c 20 | osc52
 }
+
+function psst() {
+    ps aux | awk {'if ($8 == "'"$1"'") print $0'}
+}
