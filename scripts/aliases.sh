@@ -51,6 +51,7 @@ function set_emacs_alias() {
 function set_git_alias() {
     # Git Alias {{{
     alias gs='git status'
+    alias gst='git stash'
     # }}}
 }
 

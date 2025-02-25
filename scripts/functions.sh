@@ -118,8 +118,17 @@ function json() {
 }
 
 function ediff() {
-	if [ "X${2}" = "X" ]; then
+	if [[ $# -eq 0 ]]; then
 		echo "USAGE: ediff <FILE 1> <FILE 2>"
+    elif [[ $# -eq 1 ]] && [[ "$1" = - ]]; then
+        shift
+        tempfile="$(mktemp "emacs-stdin-$USER.XXXXXXX" --tmpdir)"
+        cat - > "$tempfile"
+        _emacsfun --eval "(find-file \"$tempfile\")" \
+                  --eval '(set-visited-file-name nil)' \
+                  --eval '(rename-buffer "*stdin*" t))' \
+                  --eval '(diff-mode)'
+                  "$@"
 	else
 		# The --eval flag takes lisp code and evaluates it with EMACS
 		emacsclient -nw --socket=$(tmux_get_session_name) --eval "(ediff-files \"$1\" \"$2\")"
