@@ -1,10 +1,5 @@
 [url "https://github.com/"]
     insteadOf = "git@github.com:"
-[url "git@git.woa.com:"]
-    insteadOf = https://git.woa.com/
-[url "git@git.woa.com:"]
-    insteadOf = http://git.woa.com/
-
 [user]
 	name = Philip Ye
 	email = phye@tencent.com
