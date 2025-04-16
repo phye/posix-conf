@@ -62,7 +62,7 @@ function set_misc_alias() {
 function set_k8s_alias() {
     alias ctx="kubectx"
     alias k="kubectl"
-    alias l='kubectl provider clusters'
+    alias c='kubectl provider clusters'
     alias s='kubectl context switch'
 
     alias testgz="kubectx ti-test-gz-100031385875"
