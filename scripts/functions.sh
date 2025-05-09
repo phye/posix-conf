@@ -164,7 +164,15 @@ function osc52() {
 }
 
 function tipwd() {
-    kubectl -n kube-system get nodegroups.autoscaler.ti.org $1 -o jsonpath='{.metadata.uid}' | head -c 20 | osc52
+  ctx=""
+  if [[ $2 == "test" ]]; then
+    ctx="ti-test-sh-agent"
+  elif [[ $2 == "adc" ]]; then
+    ctx="ti-prod-shadc-agent"
+  else
+    ctx="ti-prod-sh-agent"
+  fi
+  kubectl --context $ctx -n kube-system get nodegroups.autoscaler.ti.org $1 -o jsonpath='{.metadata.uid}' | head -c 20 | osc52
 }
 
 function psst() {

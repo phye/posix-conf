@@ -75,6 +75,10 @@ function set_k8s_alias() {
 
     alias kgw="kubectl get -o wide"
     alias kx="kubectl exec -i -t"
+    alias sytnj="kubectx ti-prod-nj-100034032793"
+    alias sytsh="kubectx ti-prod-sh-100034032793"
+    alias szsnj="kubectx ti-prod-nj-100041498772"
+    alias szssh="kubectx ti-prod-sh-100041498772"
 }
 
 function set_alias() {
