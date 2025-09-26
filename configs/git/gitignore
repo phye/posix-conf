@@ -68,3 +68,5 @@ Backup of *.doc*
 
 *.patch
 *.diff
+
+TAGS
