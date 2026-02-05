@@ -6,7 +6,7 @@
 	url = https://github.com/phye/oh-my-zsh.git
 [submodule "modules/tpm"]
 	path = modules/tpm
-	url = https://github.com/tmux-plugins/tpm.git
+	url = https://github.com/RyanMacG/tpm-redux.git
 [submodule "modules/vim.d"]
 	path = modules/vim.d
 	url = https://github.com/phye/vim.d.git
