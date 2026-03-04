@@ -1,0 +1,19 @@
+# Ghost Configuration
+macos-titlebar-style = tabs
+
+font-family = "MonaspiceKr Nerd Font Mono"
+font-size = 14
+
+theme = light:Rose Pine Dawn,dark:Rose Pine
+
+# Keybindings
+
+# Bind M-w to send Esc-w sequence
+keybind = cmd+f=text:\x1bf
+keybind = cmd+n=text:\x1bn
+keybind = cmd+p=text:\x1bp
+keybind = cmd+q=text:\x1bq
+keybind = cmd+w=text:\x1bw
+keybind = cmd+x=text:\x1bx
+keybind = alt+x=text:\x1bx
+keybind = cmd+alt+r=reload_config
