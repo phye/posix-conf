@@ -10,13 +10,20 @@ export EDITOR="emacsclient -nw -a ''"
 
 export SCRIPTS=${HOME}/bin/scripts
 export GOPATH=~/ws/go
-export PATH="$HOME/bin/scripts:$HOME/bin:$HOME/.fzf/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:/usr/local/go/bin:/usr/local/bin:/opt/homebrew/bin:/snap/bin:/usr/local/opt/fzf/bin:/usr/local/opt/llvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin"
+export PATH="$HOME/ws/node/bin:$HOME/bin/scripts:$HOME/bin:$HOME/.fzf/bin:$HOME/.local/bin:$GOPATH/bin:$HOME/.cargo/bin:/usr/local/go/bin:/usr/local/bin:/opt/homebrew/bin:/opt/local/bin:/snap/bin:/usr/local/opt/fzf/bin:/usr/local/opt/llvm/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/Library/Apple/usr/bin"
 export LD_LIBRARY_PATH="/usr/local/lib"
 export MANPATH=":/usr/local/share/man"
 export LESS="-R"
 export INFOPATH="/opt/homebrew/share/info:/usr/local/share/info${INFOPATH:+:${INFOPATH}}"
 # to make custom widgets loadable before compinit
 export fpath=(${MY_ZSH_DIR}/widgets $fpath)
+
+# fnm
+FNM_PATH="/data/home/phye/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
+fi
 
 # hidpi support
 # qt 5
