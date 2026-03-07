@@ -42,8 +42,13 @@ function set_curl_alias() {
 function set_emacs_alias() {
   # Emacs Utils {{{
   alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"
+  # Emacs daemon management
   alias ed='emacs --daemon=$(tmux_get_session_name)'
-  alias ec="emacsclient -nw --socket=$(tmux_get_session_name) -a ''"
+
+  # Enhanced emacsclient with fallback and error handling
+  alias ec="emacsclient -nw --socket=\$(tmux_get_session_name) -a ''"
+  alias ecg='emacsclient --socket=$(tmux_get_session_name) -c -n'  # GUI version
+  # File selection aliases
   alias ecf='ec $(fzf)'
   # }}}
 }

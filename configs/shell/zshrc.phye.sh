@@ -20,12 +20,12 @@ function load_if_exist () {
     [ -f $1 ] && source $1
 }
 
-if [ ! -z "$IS_GRML" ]; then
-    function load_omz_plugin() {
-        f=${HOME}/.oh-my-zsh/plugins/$1/$1.plugin.zsh
-        load_if_exist $f
-    }
+function load_omz_plugin() {
+  f=${HOME}/.oh-my-zsh/plugins/$1/$1.plugin.zsh
+  load_if_exist $f
+}
 
+if [ ! -z "$IS_GRML" ]; then
     load_omz_plugin fzf
     load_omz_plugin gitfast
     load_omz_plugin git
