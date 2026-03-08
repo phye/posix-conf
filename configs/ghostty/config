@@ -4,7 +4,14 @@ macos-titlebar-style = tabs
 font-family = "MonaspiceKr Nerd Font Mono"
 font-size = 14
 
-theme = light:Rose Pine Dawn,dark:Rose Pine
+theme = light:Pro Light,dark:Atom One Dark
+
+# alternate
+# theme = light:Light Owl,dark:Atom One Dark
+
+# bad
+#theme = light:Rose Pine Dawn,dark:Rose Pine
+#theme = light:Night Owlish Light,dark:Atom One Dark
 
 # Keybindings
 
@@ -17,3 +24,5 @@ keybind = cmd+w=text:\x1bw
 keybind = cmd+x=text:\x1bx
 keybind = alt+x=text:\x1bx
 keybind = cmd+alt+r=reload_config
+keybind = cmd+r=text:reset\n
+keybind = global:cmd+ctrl+t=toggle_quick_terminal
