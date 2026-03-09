@@ -23,6 +23,7 @@ keybind = cmd+q=text:\x1bq
 keybind = cmd+w=text:\x1bw
 keybind = cmd+x=text:\x1bx
 keybind = alt+x=text:\x1bx
+keybind = alt+;=text:\x1b;
 keybind = cmd+alt+r=reload_config
 keybind = cmd+r=text:reset\n
 keybind = global:cmd+ctrl+t=toggle_quick_terminal
