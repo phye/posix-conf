@@ -17,6 +17,7 @@ theme = light:Pro Light,dark:Atom One Dark
 
 # Bind M-w to send Esc-w sequence
 keybind = cmd+f=text:\x1bf
+keybind = cmd+b=text:\x1bb
 keybind = cmd+n=text:\x1bn
 keybind = cmd+p=text:\x1bp
 keybind = cmd+q=text:\x1bq
@@ -24,6 +25,8 @@ keybind = cmd+w=text:\x1bw
 keybind = cmd+x=text:\x1bx
 keybind = alt+x=text:\x1bx
 keybind = alt+;=text:\x1b;
+keybind = alt+f=text:\x1bf
+keybind = alt+b=text:\x1bb
 keybind = cmd+alt+r=reload_config
 keybind = cmd+r=text:reset\n
 keybind = global:cmd+ctrl+t=toggle_quick_terminal
