@@ -27,6 +27,9 @@ keybind = alt+x=text:\x1bx
 keybind = alt+;=text:\x1b;
 keybind = alt+f=text:\x1bf
 keybind = alt+b=text:\x1bb
+keybind = alt+p=text:\x1bp
+keybind = alt+n=text:\x1bn
+keybind = alt+v=text:\x1bv
 keybind = cmd+alt+r=reload_config
 keybind = cmd+r=text:reset\n
 keybind = global:cmd+ctrl+t=toggle_quick_terminal
