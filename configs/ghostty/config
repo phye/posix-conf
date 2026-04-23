@@ -1,6 +1,8 @@
 # Ghost Configuration
 macos-titlebar-style = tabs
 
+shell-integration-features = ssh-env,ssh-terminfo
+
 font-family = "MonaspiceKr Nerd Font Mono"
 font-size = 14
 
