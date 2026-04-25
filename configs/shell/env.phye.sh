@@ -26,7 +26,9 @@ if [ -d "$FNM_PATH" ]; then
   eval "`fnm env`"
 fi
 
-export CLAUDE_CODE_EXECUTABLE=`which claude-internal`
+if [[ "$LOCATION" == "office" ]]; then
+  export CLAUDE_CODE_EXECUTABLE=`which claude-internal`
+fi
 # hidpi support
 # qt 5
 export QT_AUTO_SCREEN_SCALE_FACTOR=1
