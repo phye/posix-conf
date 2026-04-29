@@ -5,8 +5,9 @@
 	email = phye@tencent.com
 [core]
 	editor = "ec.sh"
-	quotePath = false
+	quotepath = false
 	excludesfile = TAGS
+	hooksPath = ~/.git-hooks
 [diff]
 	submodule = log
 [merge]
@@ -49,4 +50,8 @@
 [init]
 	defaultBranch = master
 [github]
+	user = phye
+[gitwoa]
+	user = phye
+[gongfeng]
 	user = phye
