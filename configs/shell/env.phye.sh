@@ -19,8 +19,18 @@ export INFOPATH="/opt/homebrew/share/info:/usr/local/share/info${INFOPATH:+:${IN
 # to make custom widgets loadable before compinit
 export fpath=(${MY_ZSH_DIR}/widgets $fpath)
 
+# bun
+BUN_PATH="$HOME/.bun/"
+if [ -d "$BUN_PATH" ]; then
+  # bun completions
+  [ -s "$BUN_PATH/_bun" ] && source "$BUN_PATH/_bun"
+  # bun
+  export BUN_INSTALL="$HOME/.bun"
+  export PATH="$BUN_INSTALL/bin:$PATH"
+fi
+
 # fnm
-FNM_PATH="/data/home/phye/.local/share/fnm"
+FNM_PATH="$HOME/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"

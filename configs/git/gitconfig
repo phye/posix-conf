@@ -31,10 +31,6 @@
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
-#[http "https://git.code.oa.com"]
-#      proxy = http://127.0.0.1:12639
-#[http "http://git.code.oa.com"]
-#      proxy = http://127.0.0.1:12639
 [diff "gpg"]
 	textconv = gpg --no-tty --decrypt
 
