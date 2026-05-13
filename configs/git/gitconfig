@@ -51,3 +51,8 @@
 	user = phye
 [gongfeng]
 	user = phye
+[difftool]
+	prompt = false
+	trustExitCode = true
+[mergetool]
+	trustExitCode = true
