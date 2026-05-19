@@ -70,3 +70,6 @@ Backup of *.doc*
 *.diff
 
 TAGS
+
+.agent-shell
+.claude
