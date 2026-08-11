@@ -22,6 +22,7 @@
 	discard = "checkout --"
 	lgb = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ci) %C(bold blue)<%an>%Creset%n' --abbrev-commit
 	discardall = !git status | egrep '(modified|deleted)' | cut -d : -f 2| xargs git discard
+	lg = log --graph --pretty=format:'%C(auto)%h%d %C(bold blue)%an%Creset %s %C(dim)(%cr)%Creset' --abbrev-commit
 [credential]
 	helper = cache
 [submodule]
