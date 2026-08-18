@@ -47,8 +47,6 @@ function set_emacs_alias() {
   # Enhanced emacsclient with fallback and error handling
   alias ec="emacsclient -nw --socket=\$(tmux_get_session_name) -a ''"
   alias ecg="emacsclient --socket=\$(tmux_get_session_name) -a '' -c -n"  # GUI version
-  # File selection aliases
-  alias ecf='ec $(fzf)'
   # }}}
 }
 

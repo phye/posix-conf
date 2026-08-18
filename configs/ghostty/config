@@ -29,6 +29,7 @@ keybind = alt+x=text:\x1bx
 keybind = alt+;=text:\x1b;
 keybind = alt+f=text:\x1bf
 keybind = alt+b=text:\x1bb
+keybind = alt+c=text:\x1bc
 keybind = alt+p=text:\x1bp
 keybind = alt+n=text:\x1bn
 keybind = alt+v=text:\x1bv

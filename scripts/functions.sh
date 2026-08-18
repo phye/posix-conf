@@ -55,6 +55,36 @@ function cdp() {
   cd $(git rev-parse --git-dir)/..
 }
 
+function cdd() {
+  emulate -L zsh
+  setopt pipefail no_aliases 2>/dev/null
+  local dir
+  dir=$(FZF_DEFAULT_COMMAND= \
+    FZF_DEFAULT_OPTS="--reverse --walker=dir,follow,hidden --walker-skip=.git,node_modules --scheme=path ${FZF_ALT_C_OPTS-}" \
+    fzf +m) || return
+  builtin cd -- "${dir:a}"
+}
+
+function ecd() {
+  emulate -L zsh
+  setopt pipefail no_aliases 2>/dev/null
+  local dir
+  dir=$(FZF_DEFAULT_COMMAND= \
+    FZF_DEFAULT_OPTS="--reverse --walker=dir,follow,hidden --walker-skip=.git,node_modules --scheme=path ${FZF_ALT_C_OPTS-}" \
+    fzf +m) || return
+  emacsclient -nw --socket=$(tmux_get_session_name) -a '' "${dir:a}"
+}
+
+function ecf() {
+  emulate -L zsh
+  setopt pipefail no_aliases 2>/dev/null
+  local file
+  file=$(FZF_DEFAULT_COMMAND= \
+    FZF_DEFAULT_OPTS="--reverse --walker=file,follow,hidden --walker-skip=.git --scheme=path ${FZF_CTRL_T_OPTS-}" \
+    fzf +m) || return
+  emacsclient -nw --socket=$(tmux_get_session_name) -a '' "${file:a}"
+}
+
 # from: https://github.com/davidshepherd7/emacs-read-stdin/tree/master
 # include this file in your .bashrc/.zshrc with source "emacs-pipe.sh"
 

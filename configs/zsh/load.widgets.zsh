@@ -16,3 +16,4 @@ bindkey -M viins "^ " glob-alias
 autoload -U insert-last-command-output
 zle -N insert-last-command-output
 bindkey "^X^L" insert-last-command-output
+bindkey "\ec" fzf-cd-widget
