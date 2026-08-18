@@ -85,6 +85,25 @@ function ecf() {
   emacsclient -nw --socket=$(tmux_get_session_name) -a '' "${file:a}"
 }
 
+function eca() {
+  emulate -L zsh
+  setopt pipefail no_aliases 2>/dev/null
+  local dir
+  if [[ -n "$1" ]]; then
+    if [[ ! -d "$1" ]]; then
+      echo "eca: not a directory: $1" >&2
+      return 1
+    fi
+    dir=$1
+  else
+    dir=$(FZF_DEFAULT_COMMAND= \
+      FZF_DEFAULT_OPTS="--reverse --walker=dir,follow,hidden --walker-skip=.git,node_modules --scheme=path ${FZF_ALT_C_OPTS-}" \
+      fzf +m) || return
+  fi
+  emacsclient -nw --socket=$(tmux_get_session_name) -a '' \
+    --eval "(let ((default-directory \"${dir:a}/\")) (agent-shell))"
+}
+
 # from: https://github.com/davidshepherd7/emacs-read-stdin/tree/master
 # include this file in your .bashrc/.zshrc with source "emacs-pipe.sh"
 
