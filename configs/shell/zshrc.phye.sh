@@ -13,7 +13,7 @@ hash -d trpc=~/ws/trpc
 hash -d ti=~/ws/ti-cloud
 hash -d infra=~/ws/ti-cloud/infra
 hash -d k8stotal=~/ws/github/k8s.total
-hash -d adp=~/ws/adp
+hash -d adp=~/ws/adp-workspace
 hash -d legacy=~/ws/adp/legacy
 
 function load_if_exist () {
