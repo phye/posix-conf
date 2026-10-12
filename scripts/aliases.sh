@@ -64,11 +64,6 @@ function set_misc_alias() {
 function set_k8s_alias() {
   alias ctx="kubectx"
   alias k="kubectl"
-  alias c='kubectl provider clusters'
-  alias s='kubectl context switch'
-
-  alias testgz="kubectx ti-test-gz-100031385875"
-  alias testsh="kubectx ti-test-sh-100031385875"
 
   alias kd="kubectl describe"
   alias ke="kubectl edit"
@@ -77,12 +72,6 @@ function set_k8s_alias() {
 
   alias kgw="kubectl get -o wide"
   alias kx="kubectl exec -i -t"
-  alias sytnj="kubectx ti-prod-nj-100034032793"
-  alias sytsh="kubectx ti-prod-sh-100034032793"
-  alias szsnj="kubectx ti-prod-nj-100041498772"
-  alias szssh="kubectx ti-prod-sh-100041498772"
-  alias stestnj="kubectx ti-test-nj-100031385875"
-  alias stestsh="kubectx ti-test-sh-100031385875"
 }
 
 function set_go_alias() {
