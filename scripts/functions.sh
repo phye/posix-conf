@@ -114,7 +114,7 @@ function ecr() {
   fi
   local url=$1
   emacsclient -nw --socket=$(tmux_get_session_name) -a '' \
-    --eval "(let ((default-directory \"${PWD}/\")) (inline-review-review-url \"${url}\") (inline-review-overview))"
+    --eval "(phye/inline-review-start \"${url}\" \"${PWD}\")"
 }
 
 # from: https://github.com/davidshepherd7/emacs-read-stdin/tree/master
