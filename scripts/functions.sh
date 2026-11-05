@@ -104,6 +104,19 @@ function eca() {
     --eval "(let ((default-directory \"${dir:a}/\")) (agent-shell))"
 }
 
+function ecr() {
+  emulate -L zsh
+  setopt pipefail no_aliases 2>/dev/null
+  if [[ -z "$1" ]]; then
+    echo "ecr: missing MR/PR URL argument" >&2
+    echo "Usage: ecr <merge-request-url>" >&2
+    return 1
+  fi
+  local url=$1
+  emacsclient -nw --socket=$(tmux_get_session_name) -a '' \
+    --eval "(let ((default-directory \"${PWD}/\")) (inline-review-review-url \"${url}\") (inline-review-overview))"
+}
+
 # from: https://github.com/davidshepherd7/emacs-read-stdin/tree/master
 # include this file in your .bashrc/.zshrc with source "emacs-pipe.sh"
 
