@@ -17,7 +17,14 @@ export MANPATH=":/usr/local/share/man"
 export LESS="-R"
 export INFOPATH="/opt/homebrew/share/info:/usr/local/share/info${INFOPATH:+:${INFOPATH}}"
 # to make custom widgets loadable before compinit
-export fpath=(${MY_ZSH_DIR}/widgets $fpath)
+[ -n "$MY_ZSH_DIR" ] && export fpath=(${MY_ZSH_DIR}/widgets $fpath)
+
+# Homebrew zsh-completions bundle (install via: brew install zsh-completions)
+if [ -d /opt/homebrew/share/zsh-completions ]; then
+    export fpath=(/opt/homebrew/share/zsh-completions $fpath)
+elif [ -d /usr/local/share/zsh-completions ]; then
+    export fpath=(/usr/local/share/zsh-completions $fpath)
+fi
 
 # bun
 BUN_PATH="$HOME/.bun/"
